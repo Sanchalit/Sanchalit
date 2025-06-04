@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sanchalit.github.io/Sanchalit/sitemap.xml
