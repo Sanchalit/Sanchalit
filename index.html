@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanchalit | Digital Services for Logos, Websites & Editing</title>
+    <meta name="description" content="Sanchalit is a creative digital service platform offering logo design, website development, and video editing in India at affordable prices">
+    <meta name="keywords" content="digital solutions, custom logos, responsive websites, animated websites, posters, templates, graphic design, web design, Sanchalit, affordable digital services">
+    <meta name="google-site-verification" content="b5cf7cb725d10465" />
+    <meta property="og:title" content="Sanchalit | Digital Services for Logos, Websites & Editing" />
+    <meta property="og:description" content="Professional logo, website, and editing services at Sanchalit. Get creative digital work done fast and affordably." />
+    <meta property="og:url" content="https://digipro3.github.io/DIGIPRO/" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(145deg, #1a0b3d, #2a2a72);
+            color: #e0e7ff;
+            line-height: 1.6;
+            overflow-x: hidden;
+            overscroll-behavior: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        header {
+            background: rgba(26, 11, 61, 0.95);
+            padding: 15px 20px;
+            text-align: center;
+            border-bottom: 3px solid #00e1ff;
+            box-shadow: 0 0 20px rgba(0, 225, 255, 0.5);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            color: #00e1ff;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            animation: neonGlow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes neonGlow {
+            from { text-shadow: 0 0 10px #00e1ff, 0 0 20px #c026d3, 0 0 30px #c026d3; }
+            to { text-shadow: 0 0 20px #00e1ff, 0 0 30px #c026d3, 0 0 40px #c026d3; }
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: #e0e7ff;
+            text-decoration: none;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.1rem;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            position: relative;
+            touch-action: manipulation;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background: #c026d3;
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+            background: rgba(192, 38, 211, 0.2);
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(192, 38, 211, 0.3);
+        }
+
+        nav a::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.3s ease, height 0.3s ease;
+        }
+
+        nav a:active::before {
+            width: 150px;
+            height: 150px;
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 2rem;
+            color: #00e1ff;
+            cursor: pointer;
+            padding: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .hamburger.active {
+            transform: rotate(90deg);
+        }
+
+        .nav-menu {
+            display: flex;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 120px 20px;
+            margin: 80px auto 0;
+            max-width: 900px;
+            background: rgba(26, 11, 45, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 0 40px rgba(0, 225, 255, 0.4);
+            animation: fadeIn 1.5s ease-out;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(0, 225, 255, 0.15), transparent);
+            animation: sparkle 5s infinite;
+            z-index: 0;
+        }
+
+        @keyframes sparkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.6; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.8rem;
+            color: #00e1ff;
+            margin-bottom: 20px;
+            text-shadow: 0 0 15px rgba(0, 225, 255, 0.6);
+            animation: slideInLeft 1s ease-out;
+            position: relative;
+            z-index: 1;
+        }
+
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #d8b4fe;
+            max-width: 600px;
+            margin: 0 auto 20px;
+            animation: slideInRight 1s ease-out;
+            position: relative;
+            z-index: 1;
+        }
+
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .hero .cta-button {
+            display: inline-block;
+            padding: 15px 35px;
+            background: linear-gradient(45deg, #c026d3, #00e1ff);
+            color: #ffffff;
+            text-decoration: none;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.15rem;
+            border-radius: 8px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            animation: pulse 2s infinite alternate;
+            touch-action: manipulation;
+            box-shadow: 0 0 15px rgba(192, 38, 211, 0.5);
+            z-index: 1;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.05); }
+        }
+
+        .hero .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.4s ease, height 0.4s ease;
+        }
+
+        .hero .cta-button:hover::before {
+            width: 200px;
+            height: 200px;
+        }
+
+        .hero .cta-button:hover {
+            background: linear-gradient(45deg, #00e1ff, #c026d3);
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(0, 225, 255, 0.6);
+            animation: none;
+        }
+
+        .products {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            animation: fadeIn 1s ease-out;
+            position: relative;
+        }
+
+        .products h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            color: #00e1ff;
+            margin-bottom: 40px;
+            text-shadow: 0 0 15px rgba(0, 225, 255, 0.6);
+            animation: slideInUp 1s ease-out;
+        }
+
+        @keyframes slideInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .product-card {
+            background: rgba(42, 42, 72, 0.9);
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(100px);
+            animation: staggerIn 0.8s ease-out forwards;
+            min-height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .product-card:nth-child(1) { animation-delay: 0.2s; }
+        .product-card:nth-child(2) { animation-delay: 0.3s; }
+        .product-card:nth-child(3) { animation-delay: 0.4s; }
+        .product-card:nth-child(4) { animation-delay: 0.5s; }
+        .product-card:nth-child(5) { animation-delay: 0.6s; }
+
+        @keyframes staggerIn {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 225, 255, 0.2), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .product-card:hover::before {
+            left: 100%;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 0 30px rgba(192, 38, 211, 0.75);
+        }
+
+        .product-card::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(0, 225, 255, 0.1);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.5s ease, height 0.5s ease;
+        }
+
+        .product-card:hover::after {
+            width: 300px;
+            height: 300px;
+        }
+
+        .product-card h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.8rem;
+            color: #00e1ff;
+            margin-bottom: 15px;
+            text-shadow: 0 0 10px rgba(0, 225, 255, 0.5);
+            position: relative;
+            z-index: 1;
+        }
+
+        .product-card p {
+            font-size: 1rem;
+            color: #d8b4fe;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .coming-soon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: linear-gradient(45deg, #ff5e62, #ff8b8b);
+            color: #ffffff;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 12px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            animation: glowPulse 1.5s infinite alternate;
+            box-shadow: 0 0 10px rgba(255, 94, 98, 0.5);
+        }
+
+        @keyframes glowPulse {
+            0% { box-shadow: 0 0 10px rgba(255, 94, 98, 0.5); }
+            100% { box-shadow: 0 0 20px rgba(255, 94, 98, 0.8); }
+        }
+
+        .quick-view-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: linear-gradient(45deg, #c026d3, #00e1ff);
+            color: #ffffff;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            touch-action: manipulation;
+            box-shadow: 0 0 10px rgba(192, 38, 211, 0.3);
+            z-index: 1;
+        }
+
+        .quick-view-btn.disabled {
+            background: rgba(107, 114, 128, 0.5);
+            cursor: not-allowed;
+            pointer-events: none;
+            box-shadow: none;
+        }
+
+        .quick-view-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.4s ease, height 0.4s ease;
+        }
+
+        .quick-view-btn:hover::before {
+            width: 200px;
+            height: 200px;
+        }
+
+        .quick-view-btn:hover {
+            background: linear-gradient(45deg, #00e1ff, #c026d3);
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(0, 225, 255, 0.5);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        .modal-content {
+            background: rgba(26, 11, 45, 0.85);
+            backdrop-filter: blur(12px);
+            padding: 20px;
+            border-radius: 15px;
+            max-width: 900px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 0 40px rgba(0, 225, 255, 0.5);
+            animation: scaleIn 0.5s ease-out;
+            border: 1px solid rgba(0, 225, 255, 0.3);
+            position: relative;
+        }
+
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .modal-content h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2rem;
+            color: #00e1ff;
+            margin-bottom: 20px;
+            text-align: center;
+            text-shadow: 0 0 10px rgba(0, 225, 255, 0.5);
+            animation: slideInUp 0.5s ease-out;
+        }
+
+        .package-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: rgba(42, 42, 72, 0.95);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .package-table th, .package-table td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 2px solid #00e1ff;
+            border-right: 2px solid rgba(0, 225, 255, 0.2);
+        }
+
+        .package-table th:last-child, .package-table td:last-child {
+            border-right: none;
+        }
+
+        .package-table th {
+            background: linear-gradient(45deg, #c026d3, #00e1ff);
+            color: #ffffff;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+        }
+
+        .package-table td {
+            color: #e0e7ff;
+            font-size: 1rem;
+        }
+
+        .package-table tr {
+            background: rgba(0, 225, 255, 0.05);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .package-table tr:hover {
+            background: rgba(0, 225, 255, 0.2);
+            transform: scale(1.02);
+        }
+
+        .close-btn {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background: linear-gradient(45deg, #c026d3, #00e1ff);
+            color: #ffffff;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            touch-action: manipulation;
+            box-shadow: 0 0 20px rgba(0, 225, 255, 0.3);
+        }
+
+        .close-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.4s ease, height 0.4s ease;
+        }
+
+        .close-btn:hover::before {
+            width: 200px;
+            height: 200px;
+        }
+
+        .close-btn:hover {
+            background: linear-gradient(45deg, #00e1ff, #c026d3);
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(0, 225, 255, 0.6);
+        }
+
+        .terms {
+            padding: 50px 20px;
+            background: rgba(30, 15, 50, 0.6);
+            border-radius: 15px;
+            max-width: 1200px;
+            margin: 30px auto;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .terms h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2rem;
+            color: #00e1ff;
+            margin-bottom: 20px;
+            text-align: center;
+            text-shadow: 0 0 10px rgba(0, 225, 255, 0.6);
+        }
+
+        .terms ul {
+            list-style: none;
+            padding: 0;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .terms li {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+            color: #d8b4fe;
+        }
+
+        .terms li::before {
+            content: '▹';
+            color: #00e1ff;
+            position: absolute;
+            left: 0;
+        }
+
+        .contact {
+            text-align: center;
+            padding: 50px 20px;
+            background: rgba(30, 15, 50, 0.6);
+            margin: 30px auto;
+            max-width: 900px;
+            border-radius: 8px;
+            box-shadow: 0 0 24px rgba(0, 225, 255, 0.5);
+            animation: fadeIn 1s ease-out;
+        }
+
+        .contact h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2rem;
+            color: #00e1ff;
+            margin-bottom: 15px;
+            text-shadow: 0 0 5px rgba(0, 225, 255, 0.5);
+        }
+
+        .contact p {
+            font-size: 1.1rem;
+            color: #d8b4fe;
+            margin-bottom: 15px;
+        }
+
+        .contact a {
+            color: #00e1ff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.4s ease, text-shadow 0.3s ease;
+        }
+
+        .contact a:hover {
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(0, 225, 255, 0.6);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(26, 11, 61, 0.95);
+            color: #e0e7ff;
+            font-size: 0.9rem;
+            border-top: 3px solid #00e1ff;
+            box-shadow: 0 -10px 20px rgba(0, 0, 255, 0.5);
+        }
+
+        @keyframes fadeInRow {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero {
+                padding: 80px 15px;
+                margin-top: 60px;
+            }
+
+            .hero h2, .products h2, .contact h2, .terms h2, .modal-content h2 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .hamburger {
+                display: block;
+                position: absolute;
+                top: 15px;
+                right: 20px;
+            }
+
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(26, 11, 61, 0.95);
+                padding: 20px 0;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+                transition: transform 0.3s ease-in-out;
+                transform: translateY(-100%);
+            }
+
+            .nav-menu.active {
+                display: flex;
+                transform: translateY(0);
+            }
+
+            nav a {
+                font-size: 1.2rem;
+                padding: 15px;
+                margin: 5px 15px;
+                text-align: center;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .product-card {
+                padding: 20px;
+            }
+
+            .modal-content {
+                width: 95%;
+                padding: 15px;
+            }
+
+            .package-table {
+                display: block;
+                overflow-x: auto;
+                font-size: 0.9rem;
+            }
+
+            .package-table th, .package-table td {
+                padding: 10px;
+                font-size: 0.9rem;
+            }
+
+            .cta-button, .quick-view-btn, .close-btn {
+                padding: 12px 30px;
+                font-size: 1rem;
+            }
+
+            .terms, .contact {
+                padding: 30px 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            .hero h2, .products h2, .contact h2, .terms h2 {
+                font-size: 1.6rem;
+            }
+
+            .hero p {
+                font-size: 0.95rem;
+            }
+
+            .terms li, .contact p {
+                margin-bottom: 10px;
+                font-size: 1rem;
+            }
+
+            .product-card h3 {
+                font-size: 1.6rem;
+            }
+
+            .product-card p {
+                font-size: 0.9rem;
+            }
+
+            .quick-view-btn, .cta-button, .close-btn {
+                padding: 10px 25px;
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="logo-name">Sanchalit</h1>
+        <div class="hamburger">☰</div>
+        <nav class="nav-menu">
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#terms">Terms</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h2 id="home-title">Unleash Your Brand with Sanchalit</h2>
+        <p>Transform your vision with our premium digital solutions: stunning logos, vibrant posters, versatile templates, and cutting-edge responsive websites with animations and custom domains. Coming soon: powerful Google Ads!</p>
+        <a href="#products" class="cta-button">Explore Now</a>
+    </section>
+
+    <section class="products" id="products">
+        <h2>Our Services</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <h3>Logos</h3>
+                <p>Create a bold brand identity with our custom logo designs.</p>
+                <div class="quick-view-btn" data-service="logos">Quick View</div>
+            </div>
+            <div class="product-card">
+                <h3>Templates</h3>
+                <p>Streamline your projects with our customizable templates.</p>
+                <div class="quick-view-btn" data-service="templates">Quick View</div>
+            </div>
+            <div class="product-card">
+                <h3>Posters</h3>
+                <p>Capture attention with vibrant, professional posters.</p>
+                <div class="quick-view-btn" data-service="posters">Quick View</div>
+            </div>
+            <div class="product-card">
+                <h3>Website Creation</h3>
+                <p>Build a stunning, modern, responsive website with animations and custom domains.</p>
+                <div class="quick-view-btn" data-service="website">Quick View</div>
+            </div>
+            <div class="product-card">
+                <h3>Google Ads</h3>
+                <p>Boost your reach with targeted Google Ads campaigns.</p>
+                <span class="coming-soon">Coming Soon</span>
+                <div class="quick-view-btn disabled">Quick View</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="terms" id="terms">
+        <h2>Terms and Conditions</h2>
+        <ul>
+            <li>Purchases are non-refunded. Issues due to our fault may be resolved with a refund or replacement at our discretion.</li>
+            <li>The websites we provide are basic responsive websites with animations. We do not offer SEO, custom domains, or personal domain registration unless included in the Premium package or requested. Contact us for these services, and we will strive to accommodate your needs.</li>
+        </ul>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: <a href="mailto:digiprocustomercare@gmail.com">digiprocustomercare@gmail.com</a></p>
+        <p>WhatsApp: <a href="https://wa.me/+918902095871" target="_blank">+91 8902095871</a></p>
+    </section>
+
+    <footer>
+        <p>Sanchalit v1.0 © 2025. All rights reserved.</p>
+    </footer>
+
+    <div class="modal" id="package-modal">
+        <div class="modal-content">
+            <h2 id="package-title">Package Comparison</h2>
+            <table class="package-table" id="package-table">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Basic</th>
+                        <th>Standard</th>
+                        <th>Premium</th>
+                    </tr>
+                </thead>
+                <tbody id="package-body"></tbody>
+            </table>
+            <div class="close-btn">Close</div>
+        </div>
+    </div>
+
+    <script>
+        const packages = {
+            logos: [
+                { feature: "Concepts", basic: "2 Concepts", standard: "5 Concepts", premium: "10 Concepts" },
+                { feature: "Revisions", basic: "2 Revisions", standard: "5 Revisions", premium: "15 Revisions" },
+                { feature: "Files", basic: "PNG & JPEG", standard: "PNG, JPEG & Vector", premium: "All Source Files" },
+                { feature: "Replacement", basic: "24 hours", standard: "48 hours", premium: "Within 1 week" },
+                { feature: "Delivery", basic: "24 hours", standard: "2-3 days", premium: "4-5 days" },
+                { feature: "Price", basic: "₹100", standard: "₹250", premium: "₹600" },
+            ],
+            templates: [
+                { feature: "Designs", basic: "1 Template Design", standard: "3 Template Designs", premium: "5 Template Designs" },
+                { feature: "Customization", basic: "Basic Customization", standard: "Advanced Customization", premium: "Full Customization" },
+                { feature: "Formats", basic: "Standard Formats", standard: "Multiple Formats", premium: "All Source Files" },
+                { feature: "Replacement", basic: "24 hours", standard: "48 hours", premium: "Within 1 week" },
+                { feature: "Delivery", basic: "24 hours", standard: "2-3 days", premium: "4-5 days" },
+                { feature: "Price", basic: "₹80", standard: "₹250", premium: "₹500" },
+            ],
+            posters: [
+                { feature: "Designs", basic: "1 Poster", standard: "3 Posters", premium: "6 Posters" },
+                { feature: "Revisions", basic: "1 Revision", standard: "5 Revisions", premium: "10 Revisions" },
+                { feature: "Files", basic: "Print-Ready PDF", standard: "Print & Digital Files", premium: "Full Source Files" },
+                { feature: "Replacement", basic: "24 hours", standard: "48 hours", premium: "Within 1 week" },
+                { feature: "Delivery", basic: "24 hours", standard: "2-3 days", premium: "4-5 days" },
+                { feature: "Price", basic: "₹100", standard: "₹350", premium: "₹700" },
+            ],
+            website: [
+                { feature: "Design", basic: "Basic Design", standard: "Custom Design", premium: "Advanced Design" },
+                { feature: "Features", basic: "Mobile Responsive", standard: "Mobile Responsive", premium: "Advanced Features, SEO & Domain Support" },
+                { feature: "Animations", basic: "None", standard: "Basic", premium: "Advanced" },
+                { feature: "Domain", basic: "None", standard: "None", premium: "Custom Domain Name" },
+                { feature: "Replacement", basic: "24 hours", standard: "48 hours", premium: "Within 1 week" },
+                { feature: "Price", basic: "₹800", standard: "₹1500", premium: "Contact Us" },
+            ],
+        };
+
+        function openModal(service) {
+            const modal = document.getElementById('package-modal');
+            const title = document.getElementById('package-title');
+            const tbody = document.getElementById('package-body');
+
+            if (!packages[service]) return;
+
+            title.textContent = `${service.charAt(0).toUpperCase() + service.slice(1)} Package Comparison`;
+            tbody.innerHTML = '';
+
+            packages[service].forEach((pkg, index) => {
+                const row = document.createElement('tr');
+                row.style.animation = `fadeInRow 0.5s ease-out ${index * 0.1}s forwards`;
+                row.style.opacity = '0';
+                row.innerHTML = `
+                    <td>${pkg.feature}</td>
+                    <td>${pkg.basic}</td>
+                    <td>${pkg.standard}</td>
+                    <td>${pkg.premium}</td>
+                `;
+                tbody.appendChild(row);
+            });
+
+            modal.style.display = 'flex';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('package-modal');
+            modal.style.display = 'none';
+        }
+
+        document.querySelectorAll('.quick-view-btn:not(.disabled)').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const service = btn.getAttribute('data-service');
+                openModal(service);
+            });
+        });
+
+        document.querySelector('#package-modal').addEventListener('click', (e) => {
+            if (e.target === document.getElementById('package-modal')) {
+                closeModal();
+            }
+        });
+
+        document.querySelector('.close-btn').addEventListener('click', closeModal);
+
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        if (hamburger && navMenu) {
+            hamburger.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                hamburger.classList.toggle('active');
+                hamburger.innerText = navMenu.classList.contains('active') ? '✕' : '☰';
+            });
+
+            document.querySelectorAll('.nav-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                    hamburger.classList.remove('active');
+                    hamburger.innerText = '☰';
+                });
+            });
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offset = target.offsetTop;
+                    window.scrollTo({
+                        top: offset,
+                        behavior: 'smooth'
+                    });
+                    setTimeout(() => {
+                        window.scrollTo({
+                            top: offset - 20,
+                            behavior: 'smooth'
+                        });
+                        setTimeout(() => {
+                            window.scrollTo({
+                                top: offset,
+                                behavior: 'smooth'
+                            });
+                        }, 150);
+                    }, 500);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
