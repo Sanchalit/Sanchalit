@@ -1,0 +1,1 @@
+User-agent: * Allow: / Disallow: /private/ Disallow: /admin/ Sitemap: https://sanchalit.github.io/Sanchalit/sitemap.xml
