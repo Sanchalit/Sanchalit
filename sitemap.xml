@@ -1,27 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://sanchalit.github.io/Sanchalit/</loc>
     <lastmod>2025-06-16</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanchalit.github.io/Sanchalit/"/>
+    <image:image>
+      <image:loc>https://sanchalit.github.io/Sanchalit/assets/images/hero.jpg</image:loc>
+      <image:title>Homepage Hero Image</image:title>
+      <image:caption>Welcome image for Sanchalit's portfolio</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://sanchalit.github.io/Sanchalit/about</loc>
     <lastmod>2025-06-16</lastmod>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanchalit.github.io/Sanchalit/about"/>
   </url>
   <url>
     <loc>https://sanchalit.github.io/Sanchalit/projects</loc>
     <lastmod>2025-06-16</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanchalit.github.io/Sanchalit/projects"/>
+    <image:image>
+      <image:loc>https://sanchalit.github.io/Sanchalit/assets/images/project1.jpg</image:loc>
+      <image:title>Project 1 Thumbnail</image:title>
+      <image:caption>Featured image for Project 1</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://sanchalit.github.io/Sanchalit/blog</loc>
+    <lastmod>2025-06-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanchalit.github.io/Sanchalit/blog"/>
+    <image:image>
+      <image:loc>https://sanchalit.github.io/Sanchalit/assets/images/blog-featured.jpg</image:loc>
+      <image:title>Blog Featured Image</image:title>
+      <image:caption>Latest blog post featured image</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://sanchalit.github.io/Sanchalit/contact</loc>
     <lastmod>2025-06-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanchalit.github.io/Sanchalit/contact"/>
   </url>
 </urlset>
