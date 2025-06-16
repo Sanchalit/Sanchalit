@@ -5,17 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="description" content="Sanchalit delivers stunning logo design, poster design, templates, responsive websites, and YouTube thumbnails in India. Discover vibrant, affordable digital solutions!">
-    <meta name="keywords" content="logo design, poster design, templates, responsive websites, YouTube thumbnails, Sanchalit, digital services, India">
-    <meta name="author" content="Sanchalit">
+    <meta name="description" content="Sanchalit offers stunning logo design, poster design, templates, responsive websites, and YouTube thumbnails in India. Elevate your brand with vibrant, affordable digital solutions!">
+    <meta name="keywords" content="logo design India, poster design India, responsive websites, YouTube thumbnails, Sanchalit digital services, affordable logo design, custom templates, graphic design India">
+    <meta name="author" content="Sanchalit Designs">
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Sanchalit | Vibrant Digital Solutions for Logos, Posters & More">
-    <meta property="og:description" content="Elevate your brand with Sanchalit's stunning logo design, poster design, templates, websites, and YouTube thumbnails. Affordable and creative solutions!">
+    <meta name="revisit-after" content="7 days">
+    <meta name="language" content="English">
+    <meta name="geo.region" content="IN">
+    <meta name="geo.placename" content="India">
+    <meta name="googlebot" content="index, follow">
+    <meta property="og:title" content="Sanchalit Designs | Creative Logo Design, Posters, Websites & More in India">
+    <meta property="og:description" content="Discover Sanchalit's vibrant digital solutions: logo design, poster design, responsive websites, templates, and YouTube thumbnails. Affordable creativity for your brand in India!">
     <meta property="og:image" content="https://digipro3.github.io/DIGIPRO/logo.png">
     <meta property="og:url" content="https://digipro3.github.io/DIGIPRO/">
     <meta property="og:type" content="website">
-    <title>Sanchalit | Vibrant Digital Solutions for Logos, Posters & More</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Space+Grotesk:wght@400;700&display=swap">
+    <meta property="og:site_name" content="Sanchalit Designs">
+    <meta property="og:locale" content="en_IN">
+    <title>Sanchalit Designs | Affordable Logo Design, Posters, Websites & Thumbnails in India</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Space+Grotesk:wght@400;700&family=Poppins:wght@300;500;700&display=swap">
     <style>
         :root {
             --primary: #00f7ff;
@@ -26,6 +33,7 @@
             --text-secondary: #d1d5db;
             --shadow: rgba(0, 247, 255, 0.35);
             --glow: rgba(0, 247, 255, 0.5);
+            --secondary-bg: #2a3b5a;
             --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
             --font-display: swap;
         }
@@ -41,7 +49,7 @@
         }
 
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Poppins', sans-serif;
             background: linear-gradient(145deg, var(--bg-dark) 0%, var(--bg-light) 100%);
             color: var(--text-light);
             line-height: 1.8;
@@ -59,17 +67,17 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at 50% 50%, rgba(0, 247, 255, 0.1), transparent 70%);
+            background: radial-gradient(circle at 50% 50%, rgba(0, 247, 255, 0.15), transparent 70%);
             z-index: -1;
-            opacity: 0.2;
+            opacity: 0.3;
         }
 
         header {
-            background: rgba(10, 18, 34, 0.92);
-            backdrop-filter: blur(12px);
-            padding: 1.2rem 2rem;
-            border-bottom: 4px solid var(--primary);
-            box-shadow: 0 6px 16px var(--shadow);
+            background: rgba(10, 18, 34, 0.95);
+            backdrop-filter: blur(15px);
+            padding: 1.5rem 2rem;
+            border-bottom: 5px solid var(--primary);
+            box-shadow: 0 8px 20px var(--shadow);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -77,14 +85,14 @@
 
         header h1 {
             font-family: 'Space Grotesk', sans-serif;
-            font-size: clamp(2rem, 5vw, 2.8rem);
+            font-size: clamp(2rem, 5vw, 3.2rem);
             color: var(--primary);
             text-transform: uppercase;
             letter-spacing: 4px;
             text-align: center;
             font-display: var(--font-display);
-            text-shadow: 0 0 10px var(--glow);
-            animation: fadeIn 1s ease-out;
+            text-shadow: 0 0 12px var(--glow);
+            animation: fadeIn 1.2s ease-out;
         }
 
         nav {
@@ -94,9 +102,9 @@
             top: 100%;
             left: 0;
             width: 100%;
-            background: rgba(10, 18, 34, 0.92);
-            padding: 1.2rem;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            background: rgba(10, 18, 34, 0.95);
+            padding: 1rem;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
             transform: translateY(-30px);
             opacity: 0;
             transition: var(--transition);
@@ -112,11 +120,11 @@
             color: var(--text-light);
             text-decoration: none;
             font-family: 'Space Grotesk', sans-serif;
-            font-size: clamp(1.1rem, 3.8vw, 1.3rem);
+            font-size: clamp(1.1rem, 3.5vw, 1.3rem);
             padding: 0.8rem 1.2rem;
             border-radius: 10px;
             transition: var(--transition);
-            min-height: 50px;
+            min-height: 45px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -130,11 +138,11 @@
             bottom: 0;
             left: 0;
             width: 100%;
-            height: 2px;
+            height: 3px;
             background: var(--primary);
             transform: scaleX(0);
             transform-origin: right;
-            transition: transform 0.3s ease;
+            transition: transform 0.4s ease;
         }
 
         nav a:hover::after, nav a:focus::after, nav a:active::after {
@@ -143,7 +151,7 @@
         }
 
         nav a:hover, nav a:focus, nav a:active {
-            background: rgba(255, 51, 102, 0.2);
+            background: rgba(255, 51, 102, 0.25);
             transform: translateX(8px);
             box-shadow: 0 0 10px var(--glow);
         }
@@ -156,10 +164,10 @@
             border: none;
             padding: 0.6rem;
             cursor: pointer;
-            min-width: 50px;
-            min-height: 50px;
+            min-width: 45px;
+            min-height: 45px;
             position: absolute;
-            top: 1.2rem;
+            top: 1.5rem;
             right: 1.5rem;
             transition: var(--transition);
         }
@@ -176,10 +184,10 @@
 
         .hero {
             text-align: center;
-            padding: clamp(4rem, 10vw, 6rem) 2rem;
-            margin: 3rem 2rem 0;
-            background: rgba(10, 18, 34, 0.9);
-            border-radius: 16px;
+            padding: clamp(4rem, 10vw, 6rem) 1.5rem;
+            margin: 3rem 1rem 0;
+            background: rgba(10, 18, 34, 0.92);
+            border-radius: 15px;
             box-shadow: 0 10px 30px var(--shadow);
             position: relative;
             overflow: hidden;
@@ -193,27 +201,27 @@
             width: 100%;
             height: 100%;
             background: linear-gradient(45deg, var(--shadow) 0%, transparent 60%);
-            opacity: 0.4;
+            opacity: 0.5;
             z-index: -1;
-            animation: pulse 8s infinite ease-in-out;
+            animation: pulse 10s infinite ease-in-out;
         }
 
         .hero h2 {
             font-family: 'Space Grotesk', sans-serif;
-            font-size: clamp(2.5rem, 6vw, 3.5rem);
+            font-size: clamp(2.5rem, 6vw, 4rem);
             color: var(--primary);
             margin-bottom: 1.2rem;
             font-display: var(--font-display);
             text-shadow: 0 0 12px var(--glow);
-            animation: slideInLeft 1s ease-out;
+            animation: slideInLeft 1.2s ease-out;
         }
 
         .hero p {
-            font-size: clamp(1.1rem, 4vw, 1.3rem);
+            font-size: clamp(1rem, 4vw, 1.3rem);
             color: var(--text-secondary);
             max-width: 900px;
             margin: 0 auto 2rem;
-            animation: slideInRight 1s ease-out 0.3s;
+            animation: slideInRight 1.2s ease-out 0.3s;
         }
 
         .cta-button {
@@ -226,7 +234,7 @@
             font-size: clamp(1rem, 3.5vw, 1.2rem);
             border-radius: 10px;
             transition: var(--transition);
-            box-shadow: 0 6px 16px var(--shadow);
+            box-shadow: 0 6px 15px var(--shadow);
             min-width: 160px;
             min-height: 50px;
             align-items: center;
@@ -234,7 +242,8 @@
             will-change: transform;
             position: relative;
             overflow: hidden;
-            animation: bounceIn 1s ease-out 0.6s;
+            animation: bounceIn 1.2s ease-out 0.6s;
+            margin: 0.5rem;
         }
 
         .cta-button::before {
@@ -244,8 +253,8 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-            transition: left 0.5s ease;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: left 0.6s ease;
         }
 
         .cta-button:hover::before, .cta-button:focus::before {
@@ -255,40 +264,40 @@
         .cta-button:hover, .cta-button:focus, .cta-button:active {
             background: linear-gradient(135deg, var(--primary), var(--accent));
             transform: translateY(-5px);
-            box-shadow: 0 10px 24px var(--glow);
+            box-shadow: 0 10px 25px var(--glow);
         }
 
-        .services {
-            padding: clamp(3rem, 8vw, 5rem) 2rem;
-            max-width: 1600px;
+        .services, .samples, .testimonials {
+            padding: clamp(3rem, 8vw, 5rem) 1.5rem;
+            max-width: 1500px;
             margin: 0 auto;
             text-align: center;
         }
 
-        .services h2 {
+        .services h2, .samples h2, .testimonials h2 {
             font-family: 'Space Grotesk', sans-serif;
-            font-size: clamp(2.5rem, 6vw, 3.2rem);
+            font-size: clamp(2.5rem, 6vw, 3.5rem);
             color: var(--primary);
             margin-bottom: 2.5rem;
             font-display: var(--font-display);
             text-shadow: 0 0 10px var(--glow);
-            animation: fadeIn 1s ease-out;
+            animation: fadeIn 1.2s ease-out;
         }
 
         .service-category {
             margin-bottom: 2.5rem;
-            background: rgba(10, 18, 34, 0.95);
-            border-radius: 16px;
+            background: rgba(10, 18, 34, 0.98);
+            border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 6px 20px var(--shadow);
         }
 
         .service-category h3 {
             font-family: 'Space Grotesk', sans-serif;
-            font-size: clamp(1.8rem, 4.5vw, 2.2rem);
+            font-size: clamp(1.8rem, 4.5vw, 2.3rem);
             color: var(--primary);
-            padding: 1.2rem 2rem;
-            background: rgba(20, 30, 50, 0.95);
+            padding: 1.2rem 1.5rem;
+            background: rgba(20, 30, 50, 0.98);
             cursor: pointer;
             display: flex;
             justify-content: space-between;
@@ -300,7 +309,7 @@
         }
 
         .service-category h3:hover, .service-category h3:focus, .service-category h3:active {
-            background: rgba(255, 51, 102, 0.25);
+            background: rgba(255, 51, 102, 0.3);
             transform: scale(1.02);
             box-shadow: 0 0 12px var(--glow);
         }
@@ -308,7 +317,7 @@
         .service-category h3::after {
             content: '▼';
             font-size: 1.2rem;
-            transition: transform 0.4s ease;
+            transition: transform 0.5s ease;
         }
 
         .service-category.active h3::after {
@@ -320,17 +329,17 @@
             grid-template-columns: 1fr;
             gap: 2rem;
             padding: 2rem;
-            background: rgba(20, 30, 50, 0.95);
-            border-radius: 0 0 16px 16px;
+            background: rgba(20, 30, 50, 0.98);
+            border-radius: 0 0 15px 15px;
         }
 
         .service-category.active .service-list {
             display: grid;
-            animation: slideDown 0.6s ease-out;
+            animation: slideDown 0.8s ease-out;
         }
 
         .service-card {
-            background: rgba(20, 30, 50, 0.95);
+            background: rgba(20, 30, 50, 0.98);
             padding: 2rem;
             border-radius: 12px;
             text-align: center;
@@ -343,7 +352,7 @@
             transition: var(--transition);
             position: relative;
             overflow: hidden;
-            box-shadow: 0 4px 16px var(--shadow);
+            box-shadow: 0 5px 15px var(--shadow);
         }
 
         .service-card.visible {
@@ -353,12 +362,14 @@
 
         .service-card:hover, .service-card:focus-within {
             transform: translateY(-8px);
-            box-shadow: 0 12px 24px var(--glow);
+            box-shadow: 0 12px 25px var(--glow);
         }
 
         .service-card h4 {
             font-family: 'Space Grotesk', sans-serif;
-            font-size: clamp(1.5rem, 4.5vw, 1.8rem);
+            font-size: clamp
+
+(1.5rem, 4.5vw, 1.8rem);
             color: var(--primary);
             margin-bottom: 1rem;
             font-display: var(--font-display);
@@ -366,7 +377,7 @@
         }
 
         .service-card p {
-            font-size: clamp(0.95rem, 3.5vw, 1.1rem);
+            font-size: clamp(0.9rem, 3.5vw, 1.1rem);
             color: var(--text-secondary);
             margin-bottom: 1.5rem;
         }
@@ -378,7 +389,7 @@
             background: linear-gradient(45deg, #ff6b6b, #ff9a9a);
             color: var(--text-light);
             font-family: 'Space Grotesk', sans-serif;
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             padding: 0.4rem 0.8rem;
             border-radius: 8px;
             font-display: var(--font-display);
@@ -390,14 +401,14 @@
             background: linear-gradient(135deg, var(--accent), var(--primary));
             color: var(--text-light);
             font-family: 'Space Grotesk', sans-serif;
-            font-size: clamp(0.95rem, 3.5vw, 1.1rem);
+            font-size: clamp(0.9rem, 3.5vw, 1.1rem);
             border: none;
             border-radius: 10px;
             cursor: pointer;
             transition: var(--transition);
-            box-shadow: 0 6px 16px var(--shadow);
+            box-shadow: 0 6px 15px var(--shadow);
             min-width: 140px;
-            min-height: 50px;
+            min-height: 45px;
             will-change: transform;
             position: relative;
             overflow: hidden;
@@ -410,8 +421,8 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-            transition: left 0.5s ease;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: left 0.6s ease;
         }
 
         .quick-view-btn:hover::before, .quick-view-btn:focus::before {
@@ -427,7 +438,7 @@
         .quick-view-btn:hover, .quick-view-btn:focus {
             background: linear-gradient(135deg, var(--primary), var(--accent));
             transform: translateY(-5px);
-            box-shadow: 0 10px 24px var(--glow);
+            box-shadow: 0 10px 25px var(--glow);
         }
 
         .modal {
@@ -437,7 +448,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.9);
+            background: rgba(0, 0, 0, 0.92);
             z-index: 2000;
             justify-content: center;
             align-items: flex-start;
@@ -447,16 +458,16 @@
         }
 
         .modal-content {
-            background: rgba(10, 18, 34, 0.95);
-            backdrop-filter: blur(12px);
+            background: rgba(10, 18, 34, 0.98);
+            backdrop-filter: blur(15px);
             padding: 2.5rem;
-            border-radius: 16px;
+            border-radius: 15px;
             max-width: 95%;
             max-height: 90vh;
             overflow-y: auto;
             box-shadow: 0 10px 30px var(--shadow);
             border: 1px solid var(--glow);
-            animation: zoomIn 0.5s ease-out;
+            animation: zoomIn 0.6s ease-out;
         }
 
         .modal-content h2 {
@@ -478,18 +489,18 @@
 
         .package-table {
             width: 100%;
-            background: rgba(20, 30, 50, 0.95);
+            background: rgba(20, 30, 50, 0.98);
             border-radius: 10px;
             overflow: hidden;
             margin-bottom: 2rem;
             border-collapse: collapse;
-            box-shadow: 0 4px 16px var(--shadow);
+            box-shadow: 0 5px 15px var(--shadow);
         }
 
         .package-table th, .package-table td {
             padding: 1.2rem;
             text-align: center;
-            font-size: clamp(0.95rem, 3vw, 1.1rem);
+            font-size: clamp(0.9rem, 3vw, 1.1rem);
             color: var(--text-light);
             border-bottom: 1px solid var(--shadow);
         }
@@ -505,11 +516,11 @@
         }
 
         .package-table tr:nth-child(even) {
-            background: rgba(0, 247, 255, 0.05);
+            background: rgba(0, 247, 255, 0.08);
         }
 
         .package-table tr:hover {
-            background: rgba(0, 247, 255, 0.15);
+            background: rgba(0, 247, 255, 0.2);
         }
 
         .close-btn {
@@ -519,14 +530,14 @@
             background: linear-gradient(135deg, var(--accent), var(--primary));
             color: var(--text-light);
             font-family: 'Space Grotesk', sans-serif;
-            font-size: clamp(0.95rem, 3.5vw, 1.1rem);
+            font-size: clamp(0.9rem, 3.5vw, 1.1rem);
             border: none;
             border-radius: 10px;
             cursor: pointer;
             transition: var(--transition);
-            box-shadow: 0 6px 16px var(--shadow);
+            box-shadow: 0 6px 15px var(--shadow);
             min-width: 140px;
-            min-height: 50px;
+            min-height: 45px;
             will-change: transform;
             position: relative;
             overflow: hidden;
@@ -539,8 +550,8 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-            transition: left 0.5s ease;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: left 0.6s ease;
         }
 
         .close-btn:hover::before, .close-btn:focus::before {
@@ -550,14 +561,121 @@
         .close-btn:hover, .close-btn:focus {
             background: linear-gradient(135deg, var(--primary), var(--accent));
             transform: translateY(-5px);
-            box-shadow: 0 10px 24px var(--glow);
+            box-shadow: 0 10px 25px var(--glow);
+        }
+
+        .samples .sample-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.5rem;
+            padding: 1.5rem 0;
+        }
+
+        .sample-item {
+            background: rgba(20, 30, 50, 0.98);
+            padding: 1.2rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 5px 15px var(--shadow);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .sample-item:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 25px var(--glow);
+        }
+
+        .sample-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 0.8rem;
+            display: block;
+        }
+
+        .sample-item .placeholder-text {
+            font-size: clamp(0.9rem, 3vw, 1rem);
+            color: var(--text-secondary);
+            margin-bottom: 0.8rem;
+            font-style: italic;
+        }
+
+        .sample-item h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(1.2rem, 3.5vw, 1.5rem);
+            color: var(--primary);
+            text-shadow: 0 0 6px var(--glow);
+        }
+
+        .testimonials {
+            background: rgba(20, 30, 50, 0.98);
+            border-radius: 15px;
+            padding: clamp(3rem, 8vw, 5rem) 1.5rem;
+            box-shadow: 0 10px 30px var(--shadow);
+        }
+
+        .testimonial-slider {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .testimonial-slides {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .testimonial-slide {
+            min-width: 100%;
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .testimonial-slide p {
+            font-size: clamp(1rem, 3.5vw, 1.2rem);
+            color: var(--text-secondary);
+            margin-bottom: 1.2rem;
+            font-style: italic;
+        }
+
+        .testimonial-slide h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(1.2rem, 3.5vw, 1.5rem);
+            color: var(--primary);
+            text-shadow: 0 0 6px var(--glow);
+        }
+
+        .slider-nav {
+            display: flex;
+            justify-content: center;
+            gap: 0.8rem;
+            margin-top: 1.5rem;
+        }
+
+        .slider-nav button {
+            background: linear-gradient(135deg, var(--accent), var(--primary));
+            color: var(--text-light);
+            border: none;
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 3px 10px var(--shadow);
+        }
+
+        .slider-nav button:hover {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px var(--glow);
         }
 
         .terms {
-            padding: clamp(2.5rem, 7vw, 4rem) 2rem;
-            background: rgba(20, 30, 50, 0.95);
-            border-radius: 16px;
-            max-width: 1400px;
+            padding: clamp(2.5rem, 7vw, 4rem) 1.5rem;
+            background: rgba(20, 30, 50, 0.98);
+            border-radius: 15px;
+            max-width: 1300px;
             margin: 3rem auto;
             box-shadow: 0 10px 30px var(--shadow);
         }
@@ -575,12 +693,12 @@
         .terms ul {
             list-style: none;
             padding: 0;
-            max-width: 1000px;
+            max-width: 900px;
             margin: 0 auto;
         }
 
         .terms li {
-            font-size: clamp(0.95rem, 3.5vw, 1.1rem);
+            font-size: clamp(0.9rem, 3.5vw, 1.1rem);
             margin-bottom: 1.2rem;
             padding-left: 2rem;
             position: relative;
@@ -598,11 +716,11 @@
 
         .contact {
             text-align: center;
-            padding: clamp(2.5rem, 7vw, 4rem) 2rem;
-            background: rgba(20, 30, 50, 0.95);
+            padding: clamp(2.5rem, 7vw, 4rem) 1.5rem;
+            background: rgba(20, 30, 50, 0.98);
             margin: 3rem auto;
-            max-width: 800px;
-            border-radius: 16px;
+            max-width: 700px;
+            border-radius: 15px;
             box-shadow: 0 10px 30px var(--shadow);
         }
 
@@ -616,9 +734,9 @@
         }
 
         .contact p {
-            font-size: clamp(1rem, 4vw, 1.2rem);
+            font-size: clamp(1rem, 3.5vw, 1.2rem);
             color: var(--text-secondary);
-            margin-bottom: 1.2rem;
+            margin-bottom: 1rem;
         }
 
         .contact a {
@@ -639,7 +757,7 @@
             background: var(--primary);
             transform: scaleX(0);
             transform-origin: right;
-            transition: transform 0.3s ease;
+            transition: transform 0.4s ease;
         }
 
         .contact a:hover::after, .contact a:focus::after {
@@ -655,11 +773,11 @@
         footer {
             text-align: center;
             padding: 1.2rem;
-            background: rgba(10, 18, 34, 0.95);
+            background: rgba(10, 18, 34, 0.98);
             color: var(--text-light);
             font-size: clamp(0.85rem, 3vw, 0.95rem);
-            border-top: 4px solid var(--primary);
-            box-shadow: 0 -6px 16px var(--shadow);
+            border-top: 5px solid var(--primary);
+            box-shadow: 0 -6px 15px var(--shadow);
         }
 
         .back-to-top {
@@ -670,11 +788,11 @@
             background: linear-gradient(135deg, var(--accent), var(--primary));
             color: var(--text-light);
             font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             padding: 0.8rem;
             border-radius: 50%;
             cursor: pointer;
-            box-shadow: 0 6px 16px var(--shadow);
+            box-shadow: 0 6px 15px var(--shadow);
             z-index: 1000;
             transition: var(--transition);
             min-width: 50px;
@@ -685,8 +803,8 @@
 
         .back-to-top:hover, .back-to-top:focus {
             background: linear-gradient(135deg, var(--primary), var(--accent));
-            transform: scale(1.2);
-            box-shadow: 0 10px 24px var(--glow);
+            transform: scale(1.15);
+            box-shadow: 0 10px 25px var(--glow);
         }
 
         @keyframes fadeIn {
@@ -706,7 +824,7 @@
 
         @keyframes bounceIn {
             0% { opacity: 0; transform: scale(0.8); }
-            50% { transform: scale(1.1); }
+            50% { transform: scale(1.05); }
             100% { opacity: 1; transform: scale(1); }
         }
 
@@ -721,13 +839,13 @@
         }
 
         @keyframes pulse {
-            0%, 100% { opacity: 0.4; }
-            50% { opacity: 0.2; }
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 0.3; }
         }
 
         @media (min-width: 768px) {
             header {
-                padding: 1.5rem 3rem;
+                padding: 1.8rem 3rem;
             }
 
             header h1 {
@@ -746,7 +864,7 @@
                 box-shadow: none;
                 transform: none;
                 opacity: 1;
-                margin-top: 1rem;
+                margin-top: 1.2rem;
                 justify-content: center;
                 gap: 2rem;
             }
@@ -765,12 +883,12 @@
                 font-size: 4rem;
             }
 
-            .services h2 {
+            .services h2, .samples h2, .testimonials h2 {
                 font-size: 3.5rem;
             }
 
             .service-list {
-                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+                grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             }
 
             .service-card {
@@ -786,6 +904,15 @@
                 padding: 1.5rem;
                 font-size: 1.2rem;
             }
+
+            .samples .sample-gallery {
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+                gap: 2rem;
+            }
+
+            .sample-item {
+                padding: 1.5rem;
+            }
         }
 
         @media (max-width: 480px) {
@@ -793,12 +920,22 @@
                 font-size: 1.8rem;
             }
 
-            .hero h2, .services h2, .contact h2, .terms h2 {
+            .hamburger {
+                font-size: 1.8rem;
+                top: 1.2rem;
+                right: 1.2rem;
+            }
+
+            .hero h2, .services h2, .samples h2, .testimonials h2, .contact h2, .terms h2 {
                 font-size: 2rem;
             }
 
             .service-category h3 {
                 font-size: 1.6rem;
+            }
+
+            .service-card {
+                padding: 1.5rem;
             }
 
             .service-card h4 {
@@ -812,6 +949,17 @@
             .cta-button, .quick-view-btn, .close-btn {
                 padding: 0.8rem 1.5rem;
                 font-size: 1rem;
+                min-width: 130px;
+                min-height: 40px;
+            }
+
+            .samples .sample-gallery {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 1rem;
+            }
+
+            .sample-item {
+                padding: 1rem;
             }
         }
 
@@ -820,16 +968,20 @@
                 font-size: 1.6rem;
             }
 
-            .hero h2, .services h2, .contact h2, .terms h2 {
+            .hero h2, .services h2, .samples h2, .testimonials h2, .contact h2, .terms h2 {
                 font-size: 1.8rem;
             }
 
             .service-card {
-                padding: 1.5rem;
+                padding: 1.2rem;
             }
 
             .service-card p {
                 font-size: 0.9rem;
+            }
+
+            .samples .sample-gallery {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -852,17 +1004,17 @@
             }
 
             .package-card {
-                background: rgba(20, 30, 50, 0.95);
+                background: rgba(20, 30, 50, 0.98);
                 padding: 1.5rem;
                 border-radius: 10px;
                 text-align: left;
                 cursor: pointer;
-                box-shadow: 0 4px 16px var(--shadow);
+                box-shadow: 0 5px 15px var(--shadow);
             }
 
             .package-card h3 {
                 font-family: 'Space Grotesk', sans-serif;
-                font-size: 1.4rem;
+                font-size: 1.5rem;
                 color: var(--primary);
                 margin-bottom: 1rem;
                 display: flex;
@@ -892,7 +1044,7 @@
             }
 
             .package-card p {
-                margin-bottom: 0.75rem;
+                margin-bottom: 0.8rem;
             }
         }
 
@@ -905,11 +1057,13 @@
 </head>
 <body>
     <header>
-        <h1 id="logo-name" class="header-title">Sanchalit</h1>
+        <h1 id="logo-name" class="header-title">Sanchalit Designs</h1>
         <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
         <nav class="nav-menu" aria-label="Primary">
             <a href="#home" aria-current="page">Home</a>
             <a href="#services">Services</a>
+            <a href="#samples">Samples</a>
+            <a href="#testimonials">Testimonials</a>
             <a href="#terms">Terms</a>
             <a href="#contact">Contact</a>
         </nav>
@@ -917,15 +1071,16 @@
 
     <main>
         <section class="hero" id="home">
-            <h2 class="section-title">Unleash Your Brand with Sanchalit</h2>
-            <p class="hero-description">Transform your vision with vibrant digital solutions: logos, posters, templates, responsive websites, and YouTube thumbnails. Coming soon: powerful Google Ads!</p>
-            <a href="#services" class="cta-button">Discover Now</a>
+            <h2 class="section-title">Unleash Your Brand with Sanchalit Designs</h2>
+            <p class="hero-description">Elevate your business with vibrant digital solutions: logo design, poster design, templates, responsive websites, and YouTube thumbnails in India. Coming soon: powerful Google Ads!</p>
+            <a href="#services" class="cta-button">Explore Our Services</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSe-PS73I5C_xZ9BHkuVCWQRcDJhLqTVI0yO2YvO25fH0EcVhA/viewform?usp=dialog" target="_blank" class="cta-button" aria-label="Order or Purchase Now">Order Now</a>
         </section>
 
         <section class="services" id="services">
-            <h2 class="section-title">Our Services</h2>
+            <h2 class="section-title">Explore Our Creative Services in India</h2>
             <div class="service-category" id="logo-design">
-                <h3 aria-expanded="false" tabindex="0">Logo Design</h3>
+                <h3 aria-expanded="false" tabindex="0">Logo Design Services</h3>
                 <div class="service-list">
                     <div class="service-card">
                         <h4>Business Logos</h4>
@@ -955,7 +1110,7 @@
                 </div>
             </div>
             <div class="service-category" id="poster-design">
-                <h3 aria-expanded="false" tabindex="0">Poster Design</h3>
+                <h3 aria-expanded="false" tabindex="0">Poster Design Services</h3>
                 <div class="service-list">
                     <div class="service-card">
                         <h4>Business Posters</h4>
@@ -985,7 +1140,7 @@
                 </div>
             </div>
             <div class="service-category" id="templates">
-                <h3 aria-expanded="false" tabindex="0">Templates</h3>
+                <h3 aria-expanded="false" tabindex="0">Template Design Services</h3>
                 <div class="service-list">
                     <div class="service-card">
                         <h4>Business Card Templates</h4>
@@ -1015,7 +1170,7 @@
                 </div>
             </div>
             <div class="service-category" id="other-services">
-                <h3 aria-expanded="false" tabindex="0">Other Services</h3>
+                <h3 aria-expanded="false" tabindex="0">Other Digital Services</h3>
                 <div class="service-list">
                     <div class="service-card">
                         <h4>Website Creation</h4>
@@ -1038,8 +1193,50 @@
             </div>
         </section>
 
+        <section class="samples" id="samples">
+            <h2 class="section-title">Our Sample Design Portfolio</h2>
+            <div class="sample-gallery">
+                <div class="sample-item">
+                    <div class="placeholder-text">[Solaro Logo Image Placeholder]</div>
+                    <h4>Solaro Logo</h4>
+                </div>
+                <div class="sample-item">
+                    <div class="placeholder-text">[Sanchalit Logo Image Placeholder]</div>
+                    <h4>Sanchalit Logo</h4>
+                </div>
+                <div class="sample-item">
+                    <div class="placeholder-text">[Arborea Logo Image Placeholder]</div>
+                    <h4>Arborea Logo</h4>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials" id="testimonials">
+            <h2 class="section-title">What Our Clients Say About Us</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial-slides">
+                    <div class="testimonial-slide">
+                        <p>"Sanchalit transformed our brand with a stunning logo that perfectly captures our vision. Highly recommend!"</p>
+                        <h4>— Priya Sharma, Entrepreneur</h4>
+                    </div>
+                    <div class="testimonial-slide">
+                        <p>"The posters designed by Sanchalit for our event were a hit! They really know how to make designs pop."</p>
+                        <h4>— Rohan Mehta, Event Organizer</h4>
+                    </div>
+                    <div class="testimonial-slide">
+                        <p>"Their website creation service was seamless, and the final product is both beautiful and functional."</p>
+                        <h4>— Anjali Kapoor, Business Owner</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-nav">
+                <button id="prev-slide" aria-label="Previous Testimonial">←</button>
+                <button id="next-slide" aria-label="Next Testimonial">→</button>
+            </div>
+        </section>
+
         <section class="terms" id="terms">
-            <h2 class="section-title">Terms and Conditions</h2>
+            <h2 class="section-title">Our Terms and Conditions</h2>
             <ul class="terms-list">
                 <li>Purchases are non-refunded. Issues due to our fault may be resolved with a refund or replacement at our discretion.</li>
                 <li>Websites are basic, responsive with animations. Contact us for advanced features like SEO or custom domains.</li>
@@ -1047,13 +1244,16 @@
         </section>
 
         <section class="contact" id="contact">
-            <h2 class="section-title">Contact Us</h2>
+            <h2 class="section-title">Get in Touch with Sanchalit Designs</h2>
             <p class="contact-info">WhatsApp: <a href="https://wa.me/+918902095871" target="_blank" aria-label="Contact via WhatsApp">+91 8902095871</a></p>
+            <p class="contact-info">Instagram: <a href="https://instagram.com/sanchalit.designs" target="_blank" aria-label="Visit our Instagram page">@sanchalit.designs</a></p>
+            <p class="contact-info">Email: <a href="mailto:sanchalithelp@gmail.com" aria-label="Email us at sanchalithelp@gmail.com">sanchalithelp@gmail.com</a></p>
+            <p class="contact-info">Order/Purchase: <a href="https://docs.google.com/forms/d/e/1FAIpQLSe-PS73I5C_xZ9BHkuVCWQRcDJhLqTVI0yO2YvO25fH0EcVhA/viewform?usp=dialog" target="_blank" aria-label="Order or Purchase via Google Form">Click here to order now</a></p>
         </section>
     </main>
 
     <footer>
-        <p class="footer-text">Sanchalit v1.4 © 2025</p>
+        <p class="footer-text">Sanchalit Designs v1.5 © 2025</p>
     </footer>
 
     <div class="modal" id="package-modal" role="dialog" aria-labelledby="package-title" aria-hidden="true">
@@ -1342,7 +1542,7 @@
                             if (card.getBoundingClientRect().top < window.innerHeight) {
                                 card.classList.add('visible');
                             }
-                        }, index * 100);
+                        }, index * 150);
                     });
                 }
             });
@@ -1363,7 +1563,7 @@
                                 if (card.getBoundingClientRect().top < window.innerHeight) {
                                     card.classList.add('visible');
                                 }
-                            }, index * 100);
+                            }, index * 150);
                         });
                     }
                 } else if (touchStartX - touchEndX > 50) {
@@ -1382,7 +1582,7 @@
                 const target = document.querySelector(anchor.getAttribute('href'));
                 if (target) {
                     window.scrollTo({
-                        top: target.offsetTop - 70,
+                        top: target.offsetTop - 80,
                         behavior: 'smooth'
                     });
                 }
@@ -1391,7 +1591,7 @@
 
         const backToTop = document.querySelector('#back-to-top');
         window.addEventListener('scroll', () => {
-            backToTop.style.display = window.scrollY > 150 ? 'block' : 'none';
+            backToTop.style.display = window.scrollY > 200 ? 'block' : 'none';
         });
 
         backToTop.addEventListener('click', () => {
@@ -1405,7 +1605,7 @@
                     observer.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.4 });
+        }, { threshold: 0.5 });
 
         document.querySelectorAll('.service-card').forEach(card => observer.observe(card));
 
@@ -1421,25 +1621,63 @@
                 card.classList.toggle('active');
             }
         });
+
+        // Testimonial Slider
+        const slides = document.querySelector('.testimonial-slides');
+        const slideCount = document.querySelectorAll('.testimonial-slide').length;
+        let currentSlide = 0;
+
+        document.querySelector('#next-slide').addEventListener('click', () => {
+            currentSlide = (currentSlide + 1) % slideCount;
+            slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+        });
+
+        document.querySelector('#prev-slide').addEventListener('click', () => {
+            currentSlide = (currentSlide - 1 + slideCount) % slideCount;
+            slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+        });
+
+        // Auto-slide every 5 seconds
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % slideCount;
+            slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }, 5000);
     </script>
 
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
             "@type": "Organization",
-            "name": "Sanchalit",
+            "name": "Sanchalit Designs",
             "url": "https://digipro3.github.io/DIGIPRO/",
             "logo": "https://digipro3.github.io/DIGIPRO/logo.png",
-            "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+91-8902095871",
-                "contactType": "customer service",
-                "contactOption": "WhatsApp",
-                "areaServed": "IN"
-            },
+            "contactPoint": [
+                {
+                    "@type": "ContactPoint",
+                    "telephone": "+91-8902095871",
+                    "contactType": "customer service",
+                    "contactOption": "WhatsApp",
+                    "areaServed": "IN",
+                    "email": "sanchalithelp@gmail.com"
+                },
+                {
+                    "@type": "ContactPoint",
+                    "email": "sanchalithelp@gmail.com",
+                    "contactType": "customer support",
+                    "areaServed": "IN"
+                }
+            ],
             "sameAs": [
-                "https://wa.me/+918902095871"
-            ]
+                "https://wa.me/+918902095871",
+                "https://instagram.com/sanchalit.designs",
+                "https://docs.google.com/forms/d/e/1FAIpQLSe-PS73I5C_xZ9BHkuVCWQRcDJhLqTVI0yO2YvO25fH0EcVhA/viewform?usp=dialog"
+            ],
+            "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "IN",
+                "addressLocality": "India"
+            },
+            "description": "Sanchalit Designs offers creative digital solutions including logo design, poster design, responsive websites, templates, and YouTube thumbnails in India."
         }
     </script>
 </body>
