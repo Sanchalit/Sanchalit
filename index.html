@@ -36,6 +36,8 @@
             --secondary-bg: #2a3b5a;
             --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
             --font-display: swap;
+            --yellow-glow: #ffff00;
+            --yellow-glow-shadow: rgba(255, 255, 0, 0.8);
         }
 
         * {
@@ -224,6 +226,11 @@
             animation: slideInRight 1.2s ease-out 0.3s;
         }
 
+        .hero p.yellow-glow {
+            color: var(--yellow-glow);
+            text-shadow: 0 0 10px var(--yellow-glow-shadow);
+        }
+
         .cta-button {
             display: inline-flex;
             padding: 1rem 2.5rem;
@@ -267,14 +274,14 @@
             box-shadow: 0 10px 25px var(--glow);
         }
 
-        .services, .samples, .testimonials {
+        .services, .testimonials {
             padding: clamp(3rem, 8vw, 5rem) 1.5rem;
             max-width: 1500px;
             margin: 0 auto;
             text-align: center;
         }
 
-        .services h2, .samples h2, .testimonials h2 {
+        .services h2, .testimonials h2 {
             font-family: 'Space Grotesk', sans-serif;
             font-size: clamp(2.5rem, 6vw, 3.5rem);
             color: var(--primary);
@@ -367,9 +374,7 @@
 
         .service-card h4 {
             font-family: 'Space Grotesk', sans-serif;
-            font-size: clamp
-
-(1.5rem, 4.5vw, 1.8rem);
+            font-size: clamp(1.5rem, 4.5vw, 1.8rem);
             color: var(--primary);
             margin-bottom: 1rem;
             font-display: var(--font-display);
@@ -562,50 +567,6 @@
             background: linear-gradient(135deg, var(--primary), var(--accent));
             transform: translateY(-5px);
             box-shadow: 0 10px 25px var(--glow);
-        }
-
-        .samples .sample-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 1.5rem;
-            padding: 1.5rem 0;
-        }
-
-        .sample-item {
-            background: rgba(20, 30, 50, 0.98);
-            padding: 1.2rem;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 5px 15px var(--shadow);
-            transition: var(--transition);
-            position: relative;
-        }
-
-        .sample-item:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 10px 25px var(--glow);
-        }
-
-        .sample-item img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin-bottom: 0.8rem;
-            display: block;
-        }
-
-        .sample-item .placeholder-text {
-            font-size: clamp(0.9rem, 3vw, 1rem);
-            color: var(--text-secondary);
-            margin-bottom: 0.8rem;
-            font-style: italic;
-        }
-
-        .sample-item h4 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: clamp(1.2rem, 3.5vw, 1.5rem);
-            color: var(--primary);
-            text-shadow: 0 0 6px var(--glow);
         }
 
         .testimonials {
@@ -834,7 +795,7 @@
         }
 
         @keyframes zoomIn {
-            from { opacity: 0; transform: scale(0.9); }
+            from { opacity Jamaican: 0; transform: scale(0.9); }
             to { opacity: 1; transform: scale(1); }
         }
 
@@ -883,7 +844,7 @@
                 font-size: 4rem;
             }
 
-            .services h2, .samples h2, .testimonials h2 {
+            .services h2, .testimonials h2 {
                 font-size: 3.5rem;
             }
 
@@ -904,15 +865,6 @@
                 padding: 1.5rem;
                 font-size: 1.2rem;
             }
-
-            .samples .sample-gallery {
-                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-                gap: 2rem;
-            }
-
-            .sample-item {
-                padding: 1.5rem;
-            }
         }
 
         @media (max-width: 480px) {
@@ -926,7 +878,7 @@
                 right: 1.2rem;
             }
 
-            .hero h2, .services h2, .samples h2, .testimonials h2, .contact h2, .terms h2 {
+            .hero h2, .services h2, .testimonials h2, .contact h2, .terms h2 {
                 font-size: 2rem;
             }
 
@@ -952,15 +904,6 @@
                 min-width: 130px;
                 min-height: 40px;
             }
-
-            .samples .sample-gallery {
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-                gap: 1rem;
-            }
-
-            .sample-item {
-                padding: 1rem;
-            }
         }
 
         @media (max-width: 320px) {
@@ -968,7 +911,7 @@
                 font-size: 1.6rem;
             }
 
-            .hero h2, .services h2, .samples h2, .testimonials h2, .contact h2, .terms h2 {
+            .hero h2, .services h2, .testimonials h2, .contact h2, .terms h2 {
                 font-size: 1.8rem;
             }
 
@@ -978,10 +921,6 @@
 
             .service-card p {
                 font-size: 0.9rem;
-            }
-
-            .samples .sample-gallery {
-                grid-template-columns: 1fr;
             }
         }
 
@@ -1062,7 +1001,6 @@
         <nav class="nav-menu" aria-label="Primary">
             <a href="#home" aria-current="page">Home</a>
             <a href="#services">Services</a>
-            <a href="#samples">Samples</a>
             <a href="#testimonials">Testimonials</a>
             <a href="#terms">Terms</a>
             <a href="#contact">Contact</a>
@@ -1073,6 +1011,8 @@
         <section class="hero" id="home">
             <h2 class="section-title">Unleash Your Brand with Sanchalit Designs</h2>
             <p class="hero-description">Elevate your business with vibrant digital solutions: logo design, poster design, templates, responsive websites, and YouTube thumbnails in India. Coming soon: powerful Google Ads!</p>
+            <p class="hero-description yellow-glow">New Website Update: Version 1.6</p>
+            <p class="hero-description yellow-glow">Monsoon Offers Coming on 23rd June 2025!</p>
             <a href="#services" class="cta-button">Explore Our Services</a>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSe-PS73I5C_xZ9BHkuVCWQRcDJhLqTVI0yO2YvO25fH0EcVhA/viewform?usp=dialog" target="_blank" class="cta-button" aria-label="Order or Purchase Now">Order Now</a>
         </section>
@@ -1189,24 +1129,6 @@
                         <span class="coming-soon">Coming Soon</span>
                         <button class="quick-view-btn disabled" data-service="youtubethumbnails" aria-label="YouTube Thumbnails coming soon" disabled>Quick View</button>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="samples" id="samples">
-            <h2 class="section-title">Our Sample Design Portfolio</h2>
-            <div class="sample-gallery">
-                <div class="sample-item">
-                    <div class="placeholder-text">[Solaro Logo Image Placeholder]</div>
-                    <h4>Solaro Logo</h4>
-                </div>
-                <div class="sample-item">
-                    <div class="placeholder-text">[Sanchalit Logo Image Placeholder]</div>
-                    <h4>Sanchalit Logo</h4>
-                </div>
-                <div class="sample-item">
-                    <div class="placeholder-text">[Arborea Logo Image Placeholder]</div>
-                    <h4>Arborea Logo</h4>
                 </div>
             </div>
         </section>
@@ -1426,7 +1348,7 @@
             { title: "Social Media Templates", description: "Templates for social media content." },
             { title: "Invitation Templates", description: "Elegant invitation templates." },
             { title: "Custom Templates", description: "Customized templates for your needs." },
-            { title: "Website", description: "Responsive websites with modern designs." }
+            { title: "Website", description: "Solid responsive websites with modern designs." }
         ];
 
         function openModal(service, triggerButton) {
