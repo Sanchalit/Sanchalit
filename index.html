@@ -5,24 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="description" content="Sanchalit offers stunning logo design, poster design, templates, responsive websites, and YouTube thumbnails in India. Elevate your brand with vibrant, affordable digital solutions!">
-    <meta name="keywords" content="logo design India, poster design India, responsive websites, YouTube thumbnails, Sanchalit digital services, affordable logo design, custom templates, graphic design India">
-    <meta name="author" content="Sanchalit Designs">
+    <title>Monsoon Offer | Logos, Websites & More in India</title>
+    <meta name="description" content="Monsoon Mega Offer is LIVE! Get stunning, affordable logo design, poster design, responsive websites, and more. Elevate your brand in India with our vibrant, discounted digital solutions! Services starting from ₹39.">
+    <meta name="keywords" content="logo design India, poster design India, responsive websites, YouTube thumbnails, Instagram Ads, digital services, affordable logo design, custom templates, graphic design India, monsoon offer, design sale India, graphic design discount, version 1.6">
+    <meta name="author" content="Creative Digital Solutions">
     <meta name="robots" content="index, follow">
     <meta name="revisit-after" content="7 days">
     <meta name="language" content="English">
     <meta name="geo.region" content="IN">
     <meta name="geo.placename" content="India">
     <meta name="googlebot" content="index, follow">
-    <meta property="og:title" content="Sanchalit Designs | Creative Logo Design, Posters, Websites & More in India">
-    <meta property="og:description" content="Discover Sanchalit's vibrant digital solutions: logo design, poster design, responsive websites, templates, and YouTube thumbnails. Affordable creativity for your brand in India!">
+    <meta property="og:title" content="Monsoon Offer | Creative Logo Design, Websites & More">
+    <meta property="og:description" content="Don't miss our Monsoon Mega Offer! Discover vibrant, affordable digital solutions: logo design, posters, websites, and more, starting from ₹39. Unbeatable prices for your brand in India!">
     <meta property="og:image" content="https://digipro3.github.io/DIGIPRO/logo.png">
     <meta property="og:url" content="https://digipro3.github.io/DIGIPRO/">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Sanchalit Designs">
+    <meta property="og:site_name" content="Creative Digital Solutions">
     <meta property="og:locale" content="en_IN">
-    <title>Sanchalit Designs | Affordable Logo Design, Posters, Websites & Thumbnails in India</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Space+Grotesk:wght@400;700&family=Poppins:wght@300;500;700&display=swap">
+    <link rel="icon" href="https://digipro3.github.io/DIGIPRO/logo.png" type="image/png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Space+Grotesk:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap">
     <style>
         :root {
             --primary: #00f7ff;
@@ -33,11 +34,10 @@
             --text-secondary: #d1d5db;
             --shadow: rgba(0, 247, 255, 0.35);
             --glow: rgba(0, 247, 255, 0.5);
-            --secondary-bg: #2a3b5a;
+            --monsoon-green: #29f5a0;
+            --monsoon-green-glow: rgba(41, 245, 160, 0.8);
             --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-            --font-display: swap;
-            --yellow-glow: #ffff00;
-            --yellow-glow-shadow: rgba(255, 255, 0, 0.8);
+            --testimonial-card-bg: rgba(10, 18, 34, 0.85); 
         }
 
         * {
@@ -62,40 +62,62 @@
             position: relative;
         }
 
-        body::before {
-            content: '';
+        /* Rain Animation */
+        .rain-container {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at 50% 50%, rgba(0, 247, 255, 0.15), transparent 70%);
-            z-index: -1;
-            opacity: 0.3;
+            pointer-events: none;
+            z-index: 9999;
+            overflow: hidden;
         }
 
+        .raindrop {
+            position: absolute;
+            bottom: 100%;
+            width: 1px; 
+            height: 60px; 
+            background: linear-gradient(to bottom, rgba(173, 216, 230, 0.05), rgba(173, 216, 230, 0.45)); 
+            animation: fall linear infinite;
+            opacity: 0.6; 
+        }
+
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh) rotate(2deg); 
+            }
+        }
+        
         header {
-            background: rgba(10, 18, 34, 0.95);
+            background: rgba(10, 18, 34, 0.85);
             backdrop-filter: blur(15px);
-            padding: 1.5rem 2rem;
-            border-bottom: 5px solid var(--primary);
+            -webkit-backdrop-filter: blur(15px);
+            padding: 1rem 2rem;
+            border-bottom: 3px solid var(--primary);
             box-shadow: 0 8px 20px var(--shadow);
             position: sticky;
             top: 0;
             z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .header-brand {
+            display: flex;
+            align-items: center;
+        }
+        .version-text {
+            color: var(--primary);
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.2rem; 
+            font-weight: bold;
+            text-shadow: 0 0 5px var(--glow);
         }
 
-        header h1 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: clamp(2rem, 5vw, 3.2rem);
-            color: var(--primary);
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            text-align: center;
-            font-display: var(--font-display);
-            text-shadow: 0 0 12px var(--glow);
-            animation: fadeIn 1.2s ease-out;
-        }
 
         nav {
             display: none;
@@ -104,12 +126,12 @@
             top: 100%;
             left: 0;
             width: 100%;
-            background: rgba(10, 18, 34, 0.95);
+            background: rgba(10, 18, 34, 0.98); 
             padding: 1rem;
             box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
             transform: translateY(-30px);
             opacity: 0;
-            transition: var(--transition);
+            transition: transform 0.3s ease-out, opacity 0.3s ease-out;
         }
 
         nav.active {
@@ -153,10 +175,16 @@
         }
 
         nav a:hover, nav a:focus, nav a:active {
-            background: rgba(255, 51, 102, 0.25);
+            color: var(--monsoon-green);
             transform: translateX(8px);
-            box-shadow: 0 0 10px var(--glow);
+            text-shadow: 0 0 10px var(--monsoon-green-glow);
         }
+        @media (min-width: 768px) {
+            nav a:hover, nav a:focus, nav a:active {
+                 transform: translateX(0) scale(1.05); 
+            }
+        }
+
 
         .hamburger {
             display: block;
@@ -168,20 +196,13 @@
             cursor: pointer;
             min-width: 45px;
             min-height: 45px;
-            position: absolute;
-            top: 1.5rem;
-            right: 1.5rem;
             transition: var(--transition);
+            z-index: 1001; 
         }
 
         .hamburger:hover {
             transform: rotate(180deg);
-            text-shadow: 0 0 10px var(--glow);
-        }
-
-        .hamburger:focus {
-            outline: 3px solid var(--primary);
-            outline-offset: 3px;
+            color: var(--monsoon-green);
         }
 
         .hero {
@@ -189,10 +210,11 @@
             padding: clamp(4rem, 10vw, 6rem) 1.5rem;
             margin: 3rem 1rem 0;
             background: rgba(10, 18, 34, 0.92);
-            border-radius: 15px;
+            border-radius: 20px;
             box-shadow: 0 10px 30px var(--shadow);
             position: relative;
             overflow: hidden;
+            border: 1px solid var(--primary);
         }
 
         .hero::before {
@@ -204,21 +226,25 @@
             height: 100%;
             background: linear-gradient(45deg, var(--shadow) 0%, transparent 60%);
             opacity: 0.5;
-            z-index: -1;
+            z-index: 0;
             animation: pulse 10s infinite ease-in-out;
         }
+        
+        .hero > * {
+            position: relative;
+            z-index: 1;
+        }
 
-        .hero h2 {
+        .hero h2.section-title { 
             font-family: 'Space Grotesk', sans-serif;
             font-size: clamp(2.5rem, 6vw, 4rem);
             color: var(--primary);
             margin-bottom: 1.2rem;
-            font-display: var(--font-display);
             text-shadow: 0 0 12px var(--glow);
             animation: slideInLeft 1.2s ease-out;
         }
 
-        .hero p {
+        .hero p.hero-description { 
             font-size: clamp(1rem, 4vw, 1.3rem);
             color: var(--text-secondary);
             max-width: 900px;
@@ -226,10 +252,27 @@
             animation: slideInRight 1.2s ease-out 0.3s;
         }
 
-        .hero p.yellow-glow {
-            color: var(--yellow-glow);
-            text-shadow: 0 0 10px var(--yellow-glow-shadow);
+        .monsoon-offer-banner {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(1.5rem, 4vw, 2rem) !important; 
+            color: var(--monsoon-green) !important; 
+            text-shadow: 0 0 15px var(--monsoon-green-glow);
+            padding: 1rem;
+            border: 2px solid var(--monsoon-green);
+            border-radius: 10px;
+            background: rgba(41, 245, 160, 0.1);
+            margin: 2rem auto !important; 
+            animation: bounceIn 1s ease-out 0.5s;
         }
+        
+        .offer-validity {
+            font-size: clamp(0.9rem, 3vw, 1.1rem);
+            color: var(--text-secondary);
+            margin-top: 1.5rem; 
+            font-style: italic;
+            text-shadow: 0 0 5px rgba(0,0,0,0.3);
+        }
+
 
         .cta-button {
             display: inline-flex;
@@ -251,9 +294,10 @@
             overflow: hidden;
             animation: bounceIn 1.2s ease-out 0.6s;
             margin: 0.5rem;
+            border: none; 
         }
 
-        .cta-button::before {
+        .cta-button::before { 
             content: '';
             position: absolute;
             top: 0;
@@ -269,34 +313,34 @@
         }
 
         .cta-button:hover, .cta-button:focus, .cta-button:active {
-            background: linear-gradient(135deg, var(--primary), var(--accent));
+            background: linear-gradient(135deg, var(--monsoon-green), var(--primary));
             transform: translateY(-5px);
             box-shadow: 0 10px 25px var(--glow);
         }
 
-        .services, .testimonials {
+        .services, .terms, .contact { /* Removed .testimonials from this list */
             padding: clamp(3rem, 8vw, 5rem) 1.5rem;
-            max-width: 1500px;
-            margin: 0 auto;
+            max-width: 1500px; 
+            margin: 2rem auto;
             text-align: center;
         }
 
-        .services h2, .testimonials h2 {
+        .section-title {
             font-family: 'Space Grotesk', sans-serif;
             font-size: clamp(2.5rem, 6vw, 3.5rem);
             color: var(--primary);
             margin-bottom: 2.5rem;
-            font-display: var(--font-display);
             text-shadow: 0 0 10px var(--glow);
             animation: fadeIn 1.2s ease-out;
         }
 
         .service-category {
             margin-bottom: 2.5rem;
-            background: rgba(10, 18, 34, 0.98);
+            background: var(--bg-light); 
             border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 6px 20px var(--shadow);
+            border: 1px solid rgba(var(--primary), 0.2);
         }
 
         .service-category h3 {
@@ -304,62 +348,41 @@
             font-size: clamp(1.8rem, 4.5vw, 2.3rem);
             color: var(--primary);
             padding: 1.2rem 1.5rem;
-            background: rgba(20, 30, 50, 0.98);
-            cursor: pointer;
+            background: rgba(var(--bg-dark), 0.5); 
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-start; 
             align-items: center;
             min-height: 60px;
-            transition: var(--transition);
-            will-change: transform;
             text-shadow: 0 0 8px var(--glow);
         }
 
-        .service-category h3:hover, .service-category h3:focus, .service-category h3:active {
-            background: rgba(255, 51, 102, 0.3);
-            transform: scale(1.02);
-            box-shadow: 0 0 12px var(--glow);
-        }
-
-        .service-category h3::after {
-            content: '▼';
-            font-size: 1.2rem;
-            transition: transform 0.5s ease;
-        }
-
-        .service-category.active h3::after {
-            transform: rotate(180deg);
-        }
 
         .service-list {
-            display: none;
-            grid-template-columns: 1fr;
+            display: grid; 
+            grid-template-columns: 1fr; 
             gap: 2rem;
             padding: 2rem;
-            background: rgba(20, 30, 50, 0.98);
-            border-radius: 0 0 15px 15px;
+            background: transparent; 
+            border-radius: 0 0 15px 15px; 
+            animation: fadeIn 0.8s ease-out;
         }
 
-        .service-category.active .service-list {
-            display: grid;
-            animation: slideDown 0.8s ease-out;
-        }
 
         .service-card {
-            background: rgba(20, 30, 50, 0.98);
+            background: var(--testimonial-card-bg); 
             padding: 2rem;
             border-radius: 12px;
             text-align: center;
-            min-height: auto;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            opacity: 0;
-            transform: translateY(30px);
-            transition: var(--transition);
+            opacity: 0; 
+            transform: translateY(30px); 
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out, box-shadow 0.3s ease-out, border-color 0.3s ease-out;
             position: relative;
             overflow: hidden;
             box-shadow: 0 5px 15px var(--shadow);
+            border: 1px solid transparent; 
         }
 
         .service-card.visible {
@@ -369,7 +392,8 @@
 
         .service-card:hover, .service-card:focus-within {
             transform: translateY(-8px);
-            box-shadow: 0 12px 25px var(--glow);
+            box-shadow: 0 12px 25px var(--monsoon-green-glow);
+            border-color: var(--monsoon-green);
         }
 
         .service-card h4 {
@@ -377,7 +401,6 @@
             font-size: clamp(1.5rem, 4.5vw, 1.8rem);
             color: var(--primary);
             margin-bottom: 1rem;
-            font-display: var(--font-display);
             text-shadow: 0 0 8px var(--glow);
         }
 
@@ -385,7 +408,26 @@
             font-size: clamp(0.9rem, 3.5vw, 1.1rem);
             color: var(--text-secondary);
             margin-bottom: 1.5rem;
+            flex-grow: 1; 
         }
+
+        .service-contact-more {
+            font-size: clamp(0.85rem, 3vw, 1rem);
+            color: var(--text-secondary);
+            margin-top: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .service-contact-more a {
+            color: var(--monsoon-green);
+            text-decoration: underline;
+            font-weight: 500;
+        }
+        .service-contact-more a:hover,
+        .service-contact-more a:focus {
+            color: var(--primary);
+            text-shadow: 0 0 5px var(--glow);
+        }
+
 
         .coming-soon {
             position: absolute;
@@ -397,8 +439,7 @@
             font-size: 0.85rem;
             padding: 0.4rem 0.8rem;
             border-radius: 8px;
-            font-display: var(--font-display);
-            box-shadow: 0 2px 8px var(--shadow);
+            box-shadow: 0 2px 8px var(--shadow); 
         }
 
         .quick-view-btn {
@@ -414,92 +455,102 @@
             box-shadow: 0 6px 15px var(--shadow);
             min-width: 140px;
             min-height: 45px;
-            will-change: transform;
+            will-change: transform; 
             position: relative;
-            overflow: hidden;
+            overflow: hidden; 
+            margin-top: auto; 
         }
-
-        .quick-view-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-            transition: left 0.6s ease;
-        }
-
-        .quick-view-btn:hover::before, .quick-view-btn:focus::before {
-            left: 100%;
-        }
-
         .quick-view-btn.disabled {
-            background: rgba(100, 116, 139, 0.5);
+            opacity: 0.5;
             cursor: not-allowed;
-            pointer-events: none;
+            background: var(--bg-light); 
+             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .quick-view-btn.disabled:hover, .quick-view-btn.disabled:focus {
+            transform: none; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
         }
 
-        .quick-view-btn:hover, .quick-view-btn:focus {
-            background: linear-gradient(135deg, var(--primary), var(--accent));
+
+        .quick-view-btn:not(.disabled):hover, .quick-view-btn:not(.disabled):focus {
+            background: linear-gradient(135deg, var(--monsoon-green), var(--primary));
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px var(--glow);
+            box-shadow: 0 10px 25px var(--monsoon-green-glow);
         }
+        
+        *:focus-visible {
+            outline: 3px solid var(--monsoon-green);
+            outline-offset: 3px;
+        }
+        .hamburger:focus, .cta-button:focus, .quick-view-btn:focus, .close-btn:focus, .back-to-top:focus, nav a:focus {
+             outline: none; 
+        }
+        .hamburger:focus-visible, .cta-button:focus-visible, .quick-view-btn:focus-visible, .close-btn:focus-visible, .back-to-top:focus-visible, 
+        nav a:focus-visible {
+            outline: 3px solid var(--monsoon-green);
+            outline-offset: 3px;
+        }
+
 
         .modal {
-            display: none;
+            display: none; 
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.92);
+            background: rgba(0, 0, 0, 0.92); 
             z-index: 2000;
             justify-content: center;
-            align-items: flex-start;
-            overflow-y: auto;
-            touch-action: pan-y;
-            padding: 2rem;
+            align-items: flex-start; 
+            overflow-y: auto; 
+            touch-action: pan-y; 
+            padding: 2rem; 
         }
 
         .modal-content {
             background: rgba(10, 18, 34, 0.98);
             backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
             padding: 2.5rem;
             border-radius: 15px;
-            max-width: 95%;
-            max-height: 90vh;
-            overflow-y: auto;
+            width: 100%; 
+            max-width: 95%; 
+            max-height: 90vh; 
+            overflow-y: auto; 
             box-shadow: 0 10px 30px var(--shadow);
-            border: 1px solid var(--glow);
+            border: 1px solid var(--monsoon-green);
             animation: zoomIn 0.6s ease-out;
+            scrollbar-width: thin; 
+            scrollbar-color: var(--primary) var(--bg-light); 
         }
+        .modal-content::-webkit-scrollbar {
+            width: 8px;
+        }
+        .modal-content::-webkit-scrollbar-track {
+            background: var(--bg-light);
+            border-radius: 10px;
+        }
+        .modal-content::-webkit-scrollbar-thumb {
+            background-color: var(--primary);
+            border-radius: 10px;
+            border: 2px solid var(--bg-light);
+        }
+
 
         .modal-content h2 {
             font-family: 'Space Grotesk', sans-serif;
             font-size: clamp(2rem, 5vw, 2.5rem);
-            color: var(--primary);
+            color: var(--monsoon-green);
             margin-bottom: 1.2rem;
             text-align: center;
-            font-display: var(--font-display);
-            text-shadow: 0 0 10px var(--glow);
+            text-shadow: 0 0 10px var(--monsoon-green-glow);
         }
-
         .modal-description {
-            font-size: clamp(1rem, 3.5vw, 1.2rem);
-            color: var(--text-secondary);
-            margin-bottom: 2rem;
             text-align: center;
-        }
-
-        .package-table {
-            width: 100%;
-            background: rgba(20, 30, 50, 0.98);
-            border-radius: 10px;
-            overflow: hidden;
-            margin-bottom: 2rem;
-            border-collapse: collapse;
-            box-shadow: 0 5px 15px var(--shadow);
+            margin-bottom: 1.5rem;
+            font-size: clamp(0.95rem, 3.5vw, 1.15rem);
+            color: var(--text-secondary);
         }
 
         .package-table th, .package-table td {
@@ -513,24 +564,28 @@
         .package-table th {
             background: linear-gradient(135deg, var(--accent), var(--primary));
             font-family: 'Space Grotesk', sans-serif;
-            position: sticky;
-            top: 0;
+            position: sticky; 
+            top: 0; 
             z-index: 10;
-            font-display: var(--font-display);
             text-shadow: 0 0 8px var(--glow);
         }
 
-        .package-table tr:nth-child(even) {
-            background: rgba(0, 247, 255, 0.08);
+        .price-cell del {
+            color: #ff7f7f; 
+            margin-right: 0.5rem;
+            opacity: 0.8;
         }
 
-        .package-table tr:hover {
-            background: rgba(0, 247, 255, 0.2);
+        .price-cell .new-price {
+            color: var(--monsoon-green);
+            font-weight: 700;
+            font-size: 1.2em; 
+            text-shadow: 0 0 8px var(--monsoon-green-glow);
         }
-
+        
         .close-btn {
             display: block;
-            margin: 2rem auto;
+            margin: 2rem auto 0; 
             padding: 1rem 2rem;
             background: linear-gradient(135deg, var(--accent), var(--primary));
             color: var(--text-light);
@@ -543,131 +598,30 @@
             box-shadow: 0 6px 15px var(--shadow);
             min-width: 140px;
             min-height: 45px;
-            will-change: transform;
-            position: relative;
-            overflow: hidden;
         }
-
-        .close-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-            transition: left 0.6s ease;
-        }
-
-        .close-btn:hover::before, .close-btn:focus::before {
-            left: 100%;
-        }
-
+        
         .close-btn:hover, .close-btn:focus {
-            background: linear-gradient(135deg, var(--primary), var(--accent));
+            background: linear-gradient(135deg, var(--monsoon-green), var(--primary));
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px var(--glow);
-        }
-
-        .testimonials {
-            background: rgba(20, 30, 50, 0.98);
-            border-radius: 15px;
-            padding: clamp(3rem, 8vw, 5rem) 1.5rem;
-            box-shadow: 0 10px 30px var(--shadow);
-        }
-
-        .testimonial-slider {
-            position: relative;
-            max-width: 900px;
-            margin: 0 auto;
-            overflow: hidden;
-        }
-
-        .testimonial-slides {
-            display: flex;
-            transition: transform 0.5s ease;
-        }
-
-        .testimonial-slide {
-            min-width: 100%;
-            text-align: center;
-            padding: 1.5rem;
-        }
-
-        .testimonial-slide p {
-            font-size: clamp(1rem, 3.5vw, 1.2rem);
-            color: var(--text-secondary);
-            margin-bottom: 1.2rem;
-            font-style: italic;
-        }
-
-        .testimonial-slide h4 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: clamp(1.2rem, 3.5vw, 1.5rem);
-            color: var(--primary);
-            text-shadow: 0 0 6px var(--glow);
-        }
-
-        .slider-nav {
-            display: flex;
-            justify-content: center;
-            gap: 0.8rem;
-            margin-top: 1.5rem;
-        }
-
-        .slider-nav button {
-            background: linear-gradient(135deg, var(--accent), var(--primary));
-            color: var(--text-light);
-            border: none;
-            padding: 0.6rem 1.2rem;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: var(--transition);
-            box-shadow: 0 3px 10px var(--shadow);
-        }
-
-        .slider-nav button:hover {
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            transform: translateY(-3px);
-            box-shadow: 0 6px 15px var(--glow);
+            box-shadow: 0 10px 25px var(--monsoon-green-glow);
         }
 
         .terms {
-            padding: clamp(2.5rem, 7vw, 4rem) 1.5rem;
-            background: rgba(20, 30, 50, 0.98);
+            background: var(--bg-light); 
             border-radius: 15px;
-            max-width: 1300px;
-            margin: 3rem auto;
-            box-shadow: 0 10px 30px var(--shadow);
+            border: 1px solid rgba(var(--primary), 0.2);
         }
 
-        .terms h2 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: clamp(2rem, 5vw, 2.5rem);
-            color: var(--primary);
-            margin-bottom: 2rem;
-            text-align: center;
-            font-display: var(--font-display);
-            text-shadow: 0 0 10px var(--glow);
-        }
-
-        .terms ul {
-            list-style: none;
-            padding: 0;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
+        .terms ul { list-style: none; padding: 0; max-width: 900px; margin: 0 auto; text-align:left; } 
         .terms li {
             font-size: clamp(0.9rem, 3.5vw, 1.1rem);
             margin-bottom: 1.2rem;
-            padding-left: 2rem;
+            padding-left: 2rem; 
             position: relative;
             color: var(--text-secondary);
         }
-
         .terms li::before {
-            content: '▹';
+            content: '▹'; 
             color: var(--primary);
             position: absolute;
             left: 0;
@@ -676,28 +630,13 @@
         }
 
         .contact {
-            text-align: center;
-            padding: clamp(2.5rem, 7vw, 4rem) 1.5rem;
-            background: rgba(20, 30, 50, 0.98);
-            margin: 3rem auto;
-            max-width: 700px;
+            background: var(--bg-light); 
             border-radius: 15px;
-            box-shadow: 0 10px 30px var(--shadow);
+            border: 1px solid rgba(var(--primary), 0.2);
         }
-
-        .contact h2 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: clamp(2rem, 5vw, 2.5rem);
-            color: var(--primary);
-            margin-bottom: 2rem;
-            font-display: var(--font-display);
-            text-shadow: 0 0 10px var(--glow);
-        }
-
         .contact p {
-            font-size: clamp(1rem, 3.5vw, 1.2rem);
-            color: var(--text-secondary);
-            margin-bottom: 1rem;
+            font-size: clamp(1rem, 3.8vw, 1.2rem); 
+            margin-bottom: 0.8rem; 
         }
 
         .contact a {
@@ -705,32 +644,12 @@
             text-decoration: none;
             font-weight: 600;
             transition: var(--transition);
-            position: relative;
         }
-
-        .contact a::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: var(--primary);
-            transform: scaleX(0);
-            transform-origin: right;
-            transition: transform 0.4s ease;
-        }
-
-        .contact a:hover::after, .contact a:focus::after {
-            transform: scaleX(1);
-            transform-origin: left;
-        }
-
         .contact a:hover, .contact a:focus {
-            color: var(--text-light);
-            text-shadow: 0 0 10px var(--glow);
+            color: var(--monsoon-green);
+            text-shadow: 0 0 10px var(--monsoon-green-glow);
         }
-
+        
         footer {
             text-align: center;
             padding: 1.2rem;
@@ -742,14 +661,14 @@
         }
 
         .back-to-top {
-            display: none;
+            display: none; 
             position: fixed;
             bottom: 2rem;
             right: 2rem;
             background: linear-gradient(135deg, var(--accent), var(--primary));
             color: var(--text-light);
             font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.3rem;
+            font-size: 1.3rem; 
             padding: 0.8rem;
             border-radius: 50%;
             cursor: pointer;
@@ -758,250 +677,99 @@
             transition: var(--transition);
             min-width: 50px;
             min-height: 50px;
-            text-align: center;
-            will-change: transform;
+            text-align: center; 
+            line-height: 1.2; /* Adjusted for better vertical alignment */
+            align-items: center; /* For flex display */
+            justify-content: center; /* For flex display */
         }
 
         .back-to-top:hover, .back-to-top:focus {
-            background: linear-gradient(135deg, var(--primary), var(--accent));
+            background: linear-gradient(135deg, var(--monsoon-green), var(--primary));
             transform: scale(1.15);
-            box-shadow: 0 10px 25px var(--glow);
+            box-shadow: 0 10px 25px var(--monsoon-green-glow);
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes slideInLeft {
-            from { opacity: 0; transform: translateX(-30px); }
-            to { opacity: 1; transform: translateX(0); }
-        }
-
-        @keyframes slideInRight {
-            from { opacity: 0; transform: translateX(30px); }
-            to { opacity: 1; transform: translateX(0); }
-        }
-
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes slideInLeft { from { opacity: 0; transform: translateX(-30px); } to { opacity: 1; transform: translateX(0); } }
+        @keyframes slideInRight { from { opacity: 0; transform: translateX(30px); } to { opacity: 1; transform: translateX(0); } }
         @keyframes bounceIn {
             0% { opacity: 0; transform: scale(0.8); }
             50% { transform: scale(1.05); }
             100% { opacity: 1; transform: scale(1); }
         }
-
-        @keyframes slideDown {
-            from { opacity: 0; transform: translateY(-30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes zoomIn {
-            from { opacity Jamaican: 0; transform: scale(0.9); }
-            to { opacity: 1; transform: scale(1); }
-        }
-
+        @keyframes zoomIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
         @keyframes pulse {
             0%, 100% { opacity: 0.5; }
             50% { opacity: 0.3; }
         }
 
         @media (min-width: 768px) {
-            header {
-                padding: 1.8rem 3rem;
-            }
-
-            header h1 {
-                font-size: 3.2rem;
-            }
-
-            .hamburger {
-                display: none;
-            }
-
+            header { padding: 1rem 3rem; }
+            .hamburger { display: none; }
             nav {
                 display: flex;
                 flex-direction: row;
                 position: static;
+                background: none;
                 padding: 0;
                 box-shadow: none;
                 transform: none;
                 opacity: 1;
-                margin-top: 1.2rem;
+                width: auto;
                 justify-content: center;
-                gap: 2rem;
+                gap: 1.5rem;
             }
-
-            nav a {
-                font-size: 1.2rem;
-                padding: 0.8rem 1.5rem;
-            }
-
-            .hero {
-                padding: 6rem 4rem;
-                margin: 4rem 3rem 0;
-            }
-
-            .hero h2 {
-                font-size: 4rem;
-            }
-
-            .services h2, .testimonials h2 {
-                font-size: 3.5rem;
-            }
-
-            .service-list {
-                grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            }
-
-            .service-card {
-                padding: 2.5rem;
-            }
-
-            .modal-content {
-                padding: 3rem;
-                max-width: 1100px;
-            }
-
-            .package-table th, .package-table td {
-                padding: 1.5rem;
-                font-size: 1.2rem;
+            nav a { font-size: 1.2rem; padding: 0.5rem 1rem; }
+            .service-list { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+            .modal-content { max-width: 1100px; }
+            .package-table { display: table; }
+            .package-cards { display: none; }
+            .version-text {
+                font-size: 1.4rem; 
             }
         }
-
-        @media (max-width: 480px) {
-            header h1 {
-                font-size: 1.8rem;
-            }
-
-            .hamburger {
-                font-size: 1.8rem;
-                top: 1.2rem;
-                right: 1.2rem;
-            }
-
-            .hero h2, .services h2, .testimonials h2, .contact h2, .terms h2 {
-                font-size: 2rem;
-            }
-
-            .service-category h3 {
-                font-size: 1.6rem;
-            }
-
-            .service-card {
-                padding: 1.5rem;
-            }
-
-            .service-card h4 {
-                font-size: 1.4rem;
-            }
-
-            .modal-content h2 {
-                font-size: 1.8rem;
-            }
-
-            .cta-button, .quick-view-btn, .close-btn {
-                padding: 0.8rem 1.5rem;
-                font-size: 1rem;
-                min-width: 130px;
-                min-height: 40px;
-            }
-        }
-
-        @media (max-width: 320px) {
-            header h1 {
-                font-size: 1.6rem;
-            }
-
-            .hero h2, .services h2, .testimonials h2, .contact h2, .terms h2 {
-                font-size: 1.8rem;
-            }
-
-            .service-card {
-                padding: 1.2rem;
-            }
-
-            .service-card p {
-                font-size: 0.9rem;
-            }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            * {
-                animation: none !important;
-                transition: none !important;
-            }
-        }
-
-        @media (max-width: 600px) {
-            .package-table {
-                display: none;
-            }
-
+        
+        @media (max-width: 767px) {
+            .package-table { display: none; }
             .package-cards {
                 display: flex;
                 flex-direction: column;
                 gap: 2rem;
             }
-
             .package-card {
-                background: rgba(20, 30, 50, 0.98);
+                background: var(--testimonial-card-bg); 
                 padding: 1.5rem;
                 border-radius: 10px;
                 text-align: left;
-                cursor: pointer;
                 box-shadow: 0 5px 15px var(--shadow);
+                border: 1px solid var(--primary);
             }
-
             .package-card h3 {
                 font-family: 'Space Grotesk', sans-serif;
                 font-size: 1.5rem;
                 color: var(--primary);
                 margin-bottom: 1rem;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                font-display: var(--font-display);
-                text-shadow: 0 0 8px var(--glow);
             }
-
-            .package-card h3::after {
-                content: '▼';
-                font-size: 1.2rem;
-            }
-
-            .package-card.active h3::after {
-                content: '▲';
-            }
-
-            .package-card-content {
-                display: none;
-                font-size: 0.95rem;
-                color: var(--text-light);
-            }
-
-            .package-card.active .package-card-content {
-                display: block;
-            }
-
-            .package-card p {
-                margin-bottom: 0.8rem;
-            }
+            .package-card p { margin-bottom: 0.8rem; font-size: 1rem; color: var(--text-secondary); }
+             .package-card p strong { color: var(--text-light); }
         }
 
-        @media (min-width: 601px) {
-            .package-cards {
-                display: none;
-            }
+        @media (prefers-reduced-motion: reduce) {
+            * { animation: none !important; transition: none !important; }
         }
     </style>
 </head>
 <body>
+    <div class="rain-container"></div>
+
     <header>
-        <h1 id="logo-name" class="header-title">Sanchalit Designs</h1>
-        <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
-        <nav class="nav-menu" aria-label="Primary">
+        <div class="header-brand">
+            <span class="version-text">Version 1.6</span>
+        </div>
+        <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu-mobile">☰</button>
+        <nav class="nav-menu" id="nav-menu-mobile" aria-label="Primary">
             <a href="#home" aria-current="page">Home</a>
             <a href="#services">Services</a>
-            <a href="#testimonials">Testimonials</a>
             <a href="#terms">Terms</a>
             <a href="#contact">Contact</a>
         </nav>
@@ -1009,188 +777,85 @@
 
     <main>
         <section class="hero" id="home">
-            <h2 class="section-title">Unleash Your Brand with Sanchalit Designs</h2>
-            <p class="hero-description">Elevate your business with vibrant digital solutions: logo design, poster design, templates, responsive websites, and YouTube thumbnails in India. Coming soon: powerful Google Ads!</p>
-            <p class="hero-description yellow-glow">New Website Update: Version 1.6</p>
-            <p class="hero-description yellow-glow">Monsoon Offers Coming on 23rd June 2025!</p>
-            <a href="#services" class="cta-button">Explore Our Services</a>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSe-PS73I5C_xZ9BHkuVCWQRcDJhLqTVI0yO2YvO25fH0EcVhA/viewform?usp=dialog" target="_blank" class="cta-button" aria-label="Order or Purchase Now">Order Now</a>
+            <h2 class="section-title">Unleash Your Brand's Potential</h2>
+            <p class="hero-description">Elevate your business with vibrant digital solutions: logo design, poster design, templates, and responsive websites. Powerful Google Ads, YouTube Thumbnails & Instagram Ads are coming soon!</p>
+            <div class="monsoon-offer-banner">💧 Monsoon Mega Offer Is Live! Services Starting from ₹39 Only! 💧</div>
+            <a href="#services" class="cta-button">Explore Services</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSe-PS73I5C_xZ9BHkuVCWQRcDJhLqTVI0yO2YvO25fH0EcVhA/viewform?usp=dialog" target="_blank" rel="noopener noreferrer" class="cta-button" aria-label="Order or Purchase Now">Order Now</a>
+            <p class="offer-validity">Offers valid till 7th July 2025.</p>
         </section>
 
         <section class="services" id="services">
-            <h2 class="section-title">Explore Our Creative Services in India</h2>
+            <h2 class="section-title">Our Creative Services</h2>
             <div class="service-category" id="logo-design">
-                <h3 aria-expanded="false" tabindex="0">Logo Design Services</h3>
+                <h3>Logo Design</h3>
                 <div class="service-list">
-                    <div class="service-card">
-                        <h4>Business Logos</h4>
-                        <p>Create a professional brand identity. Contact us at +91 8902095871 for samples.</p>
-                        <button class="quick-view-btn" data-service="businesslogos" aria-label="View Business Logos packages">Quick View</button>
-                    </div>
-                    <div class="service-card">
-                        <h4>YouTube Logos</h4>
-                        <p>Stand out on YouTube with unique logos. Contact us at +91 8902095871 for samples.</p>
-                        <button class="quick-view-btn" data-service="youtubelogos" aria-label="View YouTube Logos packages">Quick View</button>
-                    </div>
-                    <div class="service-card">
-                        <h4>Gaming Logos</h4>
-                        <p>Elevate your gaming brand. Contact us at +91 8902095871 for samples.</p>
-                        <button class="quick-view-btn" data-service="gaminglogos" aria-label="View Gaming Logos packages">Quick View</button>
-                    </div>
-                    <div class="service-card">
-                        <h4>Social Media Logos</h4>
-                        <p>Enhance your social media presence. Contact us at +91 8902095871 for samples.</p>
-                        <button class="quick-view-btn" data-service="socialmedialogos" aria-label="View Social Media Logos packages">Quick View</button>
-                    </div>
-                    <div class="service-card">
-                        <h4>Custom Logos</h4>
-                        <p>Tailored logos for your vision. Contact us at +91 8902095871 for samples.</p>
-                        <button class="quick-view-btn" data-service="customlogos" aria-label="View Custom Logos packages">Quick View</button>
-                    </div>
+                    <div class="service-card"><h4 class="service-card-title">Business Logos</h4><p>Forge a powerful and memorable brand identity with a professionally crafted logo.</p><p class="service-contact-more">For custom requirements or more details, <a href="#contact">contact us</a>.</p><button class="quick-view-btn" data-service="businesslogos">View Packages</button></div>
+                    <div class="service-card"><h4 class="service-card-title">YouTube Logos</h4><p>Capture your audience's attention with a unique and engaging logo for your channel.</p><p class="service-contact-more">For custom requirements or more details, <a href="#contact">contact us</a>.</p><button class="quick-view-btn" data-service="youtubelogos">View Packages</button></div>
+                    <div class="service-card"><h4 class="service-card-title">Gaming Logos</h4><p>Level up your stream or team with a dynamic and powerful gaming logo.</p><p class="service-contact-more">For custom requirements or more details, <a href="#contact">contact us</a>.</p><button class="quick-view-btn" data-service="gaminglogos">View Packages</button></div>
+                    <div class="service-card"><h4 class="service-card-title">Social Media Logos</h4><p>Boost your online presence with logos perfectly optimized for all social platforms.</p><p class="service-contact-more">For custom requirements or more details, <a href="#contact">contact us</a>.</p><button class="quick-view-btn" data-service="socialmedialogos">View Packages</button></div>
+                    <div class="service-card"><h4 class="service-card-title">Custom Logos</h4><p>Bring your unique vision to life with a fully customized logo design from scratch.</p><p class="service-contact-more">For custom requirements or more details, <a href="#contact">contact us</a>.</p><button class="quick-view-btn" data-service="customlogos">View Packages</button></div>
                 </div>
             </div>
             <div class="service-category" id="poster-design">
-                <h3 aria-expanded="false" tabindex="0">Poster Design Services</h3>
+                <h3>Poster Design</h3>
                 <div class="service-list">
-                    <div class="service-card">
-                        <h4>Business Posters</h4>
-                        <p>Promote your business with professional posters. Contact us at +91 8902095871 for samples.</p>
-                        <button class="quick-view-btn" data-service="businessposters" aria-label="View Business Posters packages">Quick View</button>
-                    </div>
-                    <div class="service-card">
-                        <h4>Event Posters</h4>
-                        <p>Create eye-catching event posters. Contact us at +91 8902095871 for samples.</p>
-                        <button class="quick-view-btn" data-service="eventposters" aria-label="View Event Posters packages">Quick View</button>
-                    </div>
-                    <div class="service-card">
-                        <h4>Social Media Posters</h4>
-                        <p>Boost engagement with vibrant posters. Contact us at +91 8902095871 for samples.</p>
-                        <button class="quick-view-btn" data-service="socialmediaposters" aria-label="View Social Media Posters packages">Quick View</button>
-                    </div>
-                    <div class="service-card">
-                        <h4>Festive Posters</h4>
-                        <p>Celebrate with festive-themed posters. Contact us at +91 8902095871 for samples.</p>
-                        <button class="quick-view-btn" data-service="festiveposters" aria-label="View Festive Posters packages">Quick View</button>
-                    </div>
-                    <div class="service-card">
-                        <h4>Custom Posters</h4>
-                        <p>Unique posters tailored to your needs. Contact us at +91 8902095871 for samples.</p>
-                        <button class="quick-view-btn" data-service="customposters" aria-label="View Custom Posters packages">Quick View</button>
-                    </div>
+                    <div class="service-card"><h4 class="service-card-title">Business Posters</h4><p>Promote your services and products effectively with eye-catching business posters.</p><p class="service-contact-more">For custom requirements or more details, <a href="#contact">contact us</a>.</p><button class="quick-view-btn" data-service="businessposters">View Packages</button></div>
+                    <div class="service-card"><h4 class="service-card-title">Event Posters</h4><p>Generate buzz and attract attendees with compelling and informative event posters.</p><p class="service-contact-more">For custom requirements or more details, <a href="#contact">contact us</a>.</p><button class="quick-view-btn" data-service="eventposters">View Packages</button></div>
+                    <div class="service-card"><h4 class="service-card-title">Social Media Posters</h4><p>Increase engagement and shares with vibrant posters designed for social feeds.</p><p class="service-contact-more">For custom requirements or more details, <a href="#contact">contact us</a>.</p><button class="quick-view-btn" data-service="socialmediaposters">View Packages</button></div>
+                    <div class="service-card"><h4 class="service-card-title">Festive Posters</h4><p>Celebrate special occasions and festivals with beautifully themed poster designs.</p><p class="service-contact-more">For custom requirements or more details, <a href="#contact">contact us</a>.</p><button class="quick-view-btn" data-service="festiveposters">View Packages</button></div>
+                    <div class="service-card"><h4 class="service-card-title">Custom Posters</h4><p>Get a unique poster designed for any purpose, perfectly tailored to your requirements.</p><p class="service-contact-more">For custom requirements or more details, <a href="#contact">contact us</a>.</p><button class="quick-view-btn" data-service="customposters">View Packages</button></div>
                 </div>
             </div>
             <div class="service-category" id="templates">
-                <h3 aria-expanded="false" tabindex="0">Template Design Services</h3>
+                <h3>Template Design</h3>
                 <div class="service-list">
-                    <div class="service-card">
-                        <h4>Business Card Templates</h4>
-                        <p>Professional business card templates. Contact us at +91 8902095871 for samples.</p>
-                        <button class="quick-view-btn" data-service="businesscardtemplates" aria-label="View Business Card Templates packages">Quick View</button>
-                    </div>
-                    <div class="service-card">
-                        <h4>Resume Templates</h4>
-                        <p>Stand out with resume templates. Contact us at +91 8902095871 for samples.</p>
-                        <button class="quick-view-btn" data-service="resumetemplates" aria-label="View Resume Templates packages">Quick View</button>
-                    </div>
-                    <div class="service-card">
-                        <h4>Social Media Templates</h4>
-                        <p>Streamline social media content. Contact us at +91 8902095871 for samples.</p>
-                        <button class="quick-view-btn" data-service="socialmediatemplates" aria-label="View Social Media Templates packages">Quick View</button>
-                    </div>
-                    <div class="service-card">
-                        <h4>Invitation Templates</h4>
-                        <p>Beautiful invitations for any occasion. Contact us at +91 8902095871 for samples.</p>
-                        <button class="quick-view-btn" data-service="invitationtemplates" aria-label="View Invitation Templates packages">Quick View</button>
-                    </div>
-                    <div class="service-card">
-                        <h4>Custom Templates</h4>
-                        <p>Customized templates for your needs. Contact us at +91 8902095871 for samples.</p>
-                        <button class="quick-view-btn" data-service="customtemplates" aria-label="View Custom Templates packages">Quick View</button>
-                    </div>
+                    <div class="service-card"><h4 class="service-card-title">Business Card Templates</h4><p>Make a lasting first impression with our professional business card designs.</p><p class="service-contact-more">For custom requirements or more details, <a href="#contact">contact us</a>.</p><button class="quick-view-btn" data-service="businesscardtemplates">View Packages</button></div>
+                    <div class="service-card"><h4 class="service-card-title">Resume Templates</h4><p>Land your dream job with a clean, modern, and professional resume template.</p><p class="service-contact-more">For custom requirements or more details, <a href="#contact">contact us</a>.</p><button class="quick-view-btn" data-service="resumetemplates">View Packages</button></div>
+                    <div class="service-card"><h4 class="service-card-title">Social Media Templates</h4><p>Maintain a consistent and beautiful brand aesthetic across your social channels.</p><p class="service-contact-more">For custom requirements or more details, <a href="#contact">contact us</a>.</p><button class="quick-view-btn" data-service="socialmediatemplates">View Packages</button></div>
+                    <div class="service-card"><h4 class="service-card-title">Invitation Templates</h4><p>Elegant and creative invitation designs for any event, from weddings to parties.</p><p class="service-contact-more">For custom requirements or more details, <a href="#contact">contact us</a>.</p><button class="quick-view-btn" data-service="invitationtemplates">View Packages</button></div>
+                    <div class="service-card"><h4 class="service-card-title">Custom Templates</h4><p>Need a template for something else? We can create custom designs for any need.</p><p class="service-contact-more">For custom requirements or more details, <a href="#contact">contact us</a>.</p><button class="quick-view-btn" data-service="customtemplates">View Packages</button></div>
                 </div>
             </div>
             <div class="service-category" id="other-services">
-                <h3 aria-expanded="false" tabindex="0">Other Digital Services</h3>
+                <h3>Other Digital Services</h3>
                 <div class="service-list">
-                    <div class="service-card">
-                        <h4>Website Creation</h4>
-                        <p>Stunning, responsive websites. Contact us at +91 8902095871 for samples.</p>
-                        <button class="quick-view-btn" data-service="website" aria-label="View Website Creation packages">Quick View</button>
-                    </div>
-                    <div class="service-card">
-                        <h4>Google Ads</h4>
-                        <p>Boost reach with Google Ads.</p>
-                        <span class="coming-soon">Coming Soon</span>
-                        <button class="quick-view-btn disabled" data-service="googleads" aria-label="Google Ads coming soon" disabled>Quick View</button>
-                    </div>
-                    <div class="service-card">
-                        <h4>YouTube Thumbnails</h4>
-                        <p>Engage with custom thumbnails.</p>
-                        <span class="coming-soon">Coming Soon</span>
-                        <button class="quick-view-btn disabled" data-service="youtubethumbnails" aria-label="YouTube Thumbnails coming soon" disabled>Quick View</button>
-                    </div>
+                    <div class="service-card"><h4 class="service-card-title">Website Creation</h4><p>Get a stunning, fast, and responsive website to establish your online presence.</p><p class="service-contact-more">For custom requirements or more details, <a href="#contact">contact us</a>.</p><button class="quick-view-btn" data-service="website">View Packages</button></div>
+                    <div class="service-card"><h4 class="service-card-title">Google Ads</h4><p>Boost your reach and drive targeted traffic with effective Google Ads campaigns.</p><p class="service-contact-more">For custom requirements or more details, <a href="#contact">contact us</a>.</p><span class="coming-soon">Coming Soon</span><button class="quick-view-btn disabled" data-service="googleads" disabled>View Packages</button></div>
+                    <div class="service-card"><h4 class="service-card-title">YouTube Thumbnails</h4><p>Increase your click-through rate with custom, attention-grabbing thumbnails.</p><p class="service-contact-more">For custom requirements or more details, <a href="#contact">contact us</a>.</p><span class="coming-soon">Coming Soon</span><button class="quick-view-btn disabled" data-service="youtubethumbnails" disabled>View Packages</button></div>
+                     <div class="service-card"><h4 class="service-card-title">Instagram Ads</h4><p>Reach your target audience on Instagram with compelling ad creatives and campaigns.</p><p class="service-contact-more">For custom requirements or more details, <a href="#contact">contact us</a>.</p><span class="coming-soon">Coming Soon</span><button class="quick-view-btn disabled" data-service="instagramads" disabled>View Packages</button></div>
                 </div>
-            </div>
-        </section>
-
-        <section class="testimonials" id="testimonials">
-            <h2 class="section-title">What Our Clients Say About Us</h2>
-            <div class="testimonial-slider">
-                <div class="testimonial-slides">
-                    <div class="testimonial-slide">
-                        <p>"Sanchalit transformed our brand with a stunning logo that perfectly captures our vision. Highly recommend!"</p>
-                        <h4>— Priya Sharma, Entrepreneur</h4>
-                    </div>
-                    <div class="testimonial-slide">
-                        <p>"The posters designed by Sanchalit for our event were a hit! They really know how to make designs pop."</p>
-                        <h4>— Rohan Mehta, Event Organizer</h4>
-                    </div>
-                    <div class="testimonial-slide">
-                        <p>"Their website creation service was seamless, and the final product is both beautiful and functional."</p>
-                        <h4>— Anjali Kapoor, Business Owner</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="slider-nav">
-                <button id="prev-slide" aria-label="Previous Testimonial">←</button>
-                <button id="next-slide" aria-label="Next Testimonial">→</button>
             </div>
         </section>
 
         <section class="terms" id="terms">
-            <h2 class="section-title">Our Terms and Conditions</h2>
+            <h2 class="section-title">Terms & Conditions</h2>
             <ul class="terms-list">
-                <li>Purchases are non-refunded. Issues due to our fault may be resolved with a refund or replacement at our discretion.</li>
-                <li>Websites are basic, responsive with animations. Contact us for advanced features like SEO or custom domains.</li>
+                <li>All purchases are final and non-refundable. Issues arising from our fault may be eligible for a resolution at our discretion.</li>
+                <li>Websites are built as basic, responsive pages with standard animations. Advanced features like custom domains or SEO are available at extra cost.</li>
+                <li>Monsoon offer prices (starting ₹39 for basic packages, specific prices for website packages) are valid till 7th July 2025.</li>
             </ul>
         </section>
 
         <section class="contact" id="contact">
-            <h2 class="section-title">Get in Touch with Sanchalit Designs</h2>
-            <p class="contact-info">WhatsApp: <a href="https://wa.me/+918902095871" target="_blank" aria-label="Contact via WhatsApp">+91 8902095871</a></p>
-            <p class="contact-info">Instagram: <a href="https://instagram.com/sanchalit.designs" target="_blank" aria-label="Visit our Instagram page">@sanchalit.designs</a></p>
-            <p class="contact-info">Email: <a href="mailto:sanchalithelp@gmail.com" aria-label="Email us at sanchalithelp@gmail.com">sanchalithelp@gmail.com</a></p>
-            <p class="contact-info">Order/Purchase: <a href="https://docs.google.com/forms/d/e/1FAIpQLSe-PS73I5C_xZ9BHkuVCWQRcDJhLqTVI0yO2YvO25fH0EcVhA/viewform?usp=dialog" target="_blank" aria-label="Order or Purchase via Google Form">Click here to order now</a></p>
+            <h2 class="section-title">Get in Touch</h2>
+            <p>WhatsApp: <a href="https://wa.me/+918902095871" target="_blank" rel="noopener noreferrer" aria-label="Contact via WhatsApp">+91 8902095871</a></p>
+            <p>Instagram: <a href="https://instagram.com/sanchalit.designs" target="_blank" rel="noopener noreferrer" aria-label="Visit our Instagram page">@sanchalit.designs</a></p>
+            <p>Email: <a href="mailto:sanchalithelp@gmail.com" aria-label="Email us">sanchalithelp@gmail.com</a></p>
+            <p>Order Now: <a href="https://docs.google.com/forms/d/e/1FAIpQLSe-PS73I5C_xZ9BHkuVCWQRcDJhLqTVI0yO2YvO25fH0EcVhA/viewform?usp=dialog" target="_blank" rel="noopener noreferrer" aria-label="Order via Google Form">Click Here to Order</a></p>
         </section>
     </main>
 
     <footer>
-        <p class="footer-text">Sanchalit Designs v1.5 © 2025</p>
+        <p>© 2024. Version 1.6. All Rights Reserved.</p>
     </footer>
 
-    <div class="modal" id="package-modal" role="dialog" aria-labelledby="package-title" aria-hidden="true">
-        <div class="modal-content">
-            <h2 id="package-title" class="modal-title">Package Details</h2>
+    <div class="modal" id="package-modal" role="dialog" aria-labelledby="package-title" aria-hidden="true" aria-modal="true">
+        <div class="modal-content" role="document" tabindex="-1">
+            <h2 id="package-title">Package Details</h2>
             <p id="modal-description" class="modal-description"></p>
             <table class="package-table" id="package-table">
-                <thead>
-                    <tr>
-                        <th>Feature</th>
-                        <th>Basic</th>
-                        <th>Standard</th>
-                        <th>Premium</th>
-                    </tr>
-                </thead>
+                <thead><tr><th>Feature</th><th>Basic</th><th>Standard</th><th>Premium</th></tr></thead>
                 <tbody id="package-body"></tbody>
             </table>
             <div class="package-cards" id="package-cards"></div>
@@ -1200,407 +865,226 @@
 
     <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
 
-    <script async defer>
-        const packages = {
-            businesslogos: [
-                { feature: "Concepts", basic: "2", standard: "6", premium: "6" },
-                { feature: "Revisions", basic: "2", standard: "5", premium: "10" },
-                { feature: "Files", basic: "PNG, JPEG", standard: "PNG, JPEG, PDF", premium: "All Source Files" },
-                { feature: "Replacement", basic: "24 hours", standard: "48 hours", premium: "72 hours" },
-                { feature: "Delivery", basic: "24 hours", standard: "2-3 Days", premium: "4-5 Days" },
-                { feature: "Price", basic: "₹299", standard: "₹399", premium: "₹499" }
-            ],
-            youtubelogos: [
-                { feature: "Concepts", basic: "2", standard: "6", premium: "6" },
-                { feature: "Revisions", basic: "2", standard: "5", premium: "10" },
-                { feature: "Files", basic: "PNG, JPEG", standard: "PNG, JPEG", premium: "All Source Files" },
-                { feature: "Replacement", basic: "24 hours", standard: "48 hours", premium: "72 hours" },
-                { feature: "Delivery", basic: "24 hours", standard: "2-3 Days", premium: "4-5 Days" },
-                { feature: "Price", basic: "₹349", standard: "₹449", premium: "₹489" }
-            ],
-            gaminglogos: [
-                { feature: "Concepts", basic: "2", standard: "6", premium: "6" },
-                { feature: "Revisions", basic: "2", standard: "6", premium: "10" },
-                { feature: "Files", basic: "PNG, JPEG", standard: "PNG, JPEG", premium: "All Source Files" },
-                { feature: "Replacement", basic: "24 hours", standard: "48 hours", premium: "72 hours" },
-                { feature: "Delivery", basic: "24 hours", standard: "2-3 Days", premium: "4-5 Days" },
-                { feature: "Price", basic: "₹279", standard: "₹379", premium: "₹479" }
-            ],
-            socialmedialogos: [
-                { feature: "Concepts", basic: "2", standard: "6", premium: "6" },
-                { feature: "Revisions", basic: "2", standard: "5", premium: "10" },
-                { feature: "Files", basic: "PNG, JPEG", standard: "PNG, JPEG", premium: "All Source Files" },
-                { feature: "Replacement", basic: "24 hours", standard: "48 hours", premium: "72 hours" },
-                { feature: "Delivery", basic: "24 hours", standard: "2-3 Days", premium: "4-5 Days" },
-                { feature: "Price", basic: "₹319", standard: "₹419", premium: "₹469" }
-            ],
-            customlogos: [
-                { feature: "Concepts", basic: "2", standard: "6", premium: "10" },
-                { feature: "Revisions", basic: "3", standard: "7", premium: "Unlimited" },
-                { feature: "Files", basic: "PNG, JPEG", standard: "PNG, JPEG, PDF", premium: "All Source Files" },
-                { feature: "Replacement", basic: "24 hours", standard: "48 hours", premium: "72 hours" },
-                { feature: "Delivery", basic: "48 hours", standard: "2-3 Days", premium: "4-5 Days" },
-                { feature: "Price", basic: "₹359", standard: "₹459", premium: "₹499" }
-            ],
-            businessposters: [
-                { feature: "Designs", basic: "1", standard: "2", premium: "3" },
-                { feature: "Revisions", basic: "1", standard: "5", premium: "10" },
-                { feature: "Files", basic: "Print-Ready PDF", standard: "Print & Save", premium: "All Source Files" },
-                { feature: "Replacement", basic: "24 hours", standard: "48 hours", premium: "72 hours" },
-                { feature: "Delivery", basic: "24 hours", standard: "2-3 Days", premium: "Standard" },
-                { feature: "Price", basic: "₹289", standard: "₹389", premium: "₹489" }
-            ],
-            eventposters: [
-                { feature: "Designs", basic: "1", standard: "2", premium: "3" },
-                { feature: "Revisions", basic: "1", standard: "5", premium: "10" },
-                { feature: "Files", basic: "Print-Ready PDF", standard: "Print & Save", premium: "All Source Files" },
-                { feature: "Replacement", basic: "24 hours", standard: "48 hours", premium: "72 hours" },
-                { feature: "Delivery", basic: "24 hours", standard: "2-3 Days", premium: "Standard" },
-                { feature: "Price", basic: "₹339", standard: "₹439", premium: "₹479" }
-            ],
-            socialmediaposters: [
-                { feature: "Designs", basic: "1", standard: "2", premium: "3" },
-                { feature: "Revisions", basic: "1", standard: "5", premium: "10" },
-                { feature: "Files", basic: "Digital", standard: "Digital & Optimized", premium: "All Source Files" },
-                { feature: "Replacement", basic: "24 hours", standard: "48 hours", premium: "72 hours" },
-                { feature: "Delivery", basic: "24 hours", standard: "2-3 Days", premium: "Standard" },
-                { feature: "Price", basic: "₹269", standard: "₹369", premium: "₹469" }
-            ],
-            festiveposters: [
-                { feature: "Designs", basic: "1", standard: "2", premium: "3" },
-                { feature: "Revisions", basic: "1", standard: "5", premium: "10" },
-                { feature: "Files", basic: "Print-Ready PDF", standard: "Print & Save", premium: "All Source Files" },
-                { feature: "Replacement", basic: "24 hours", standard: "48 hours", premium: "72 hours" },
-                { feature: "Delivery", basic: "24 hours", standard: "2-3 Days", premium: "Standard" },
-                { feature: "Price", basic: "₹309", standard: "₹409", premium: "₹469" }
-            ],
-            customposters: [
-                { feature: "Designs", basic: "1", standard: "2", premium: "3" },
-                { feature: "Revisions", basic: "2", standard: "7", premium: "Unlimited" },
-                { feature: "Files", basic: "Print-Ready PDF", standard: "Print & Save", premium: "All Source Files" },
-                { feature: "Replacement", basic: "24 hours", standard: "48 hours", premium: "72 hours" },
-                { feature: "Delivery", basic: "48 hours", standard: "3-4 Days", premium: "Standard" },
-                { feature: "Price", basic: "₹349", standard: "₹449", premium: "₹499" }
-            ],
-            businesscardtemplates: [
-                { feature: "Designs", basic: "1", standard: "2", premium: "3" },
-                { feature: "Customization", basic: "Basic", standard: "Advanced", premium: "Full" },
-                { feature: "Formats", basic: "Standard", standard: "Multiple", premium: "All Source Files" },
-                { feature: "Replacement", basic: "24 hours", standard: "48 hours", premium: "72 hours" },
-                { feature: "Delivery", basic: "24 hours", standard: "2-3 Days", premium: "Standard" },
-                { feature: "Price", basic: "₹259", standard: "₹359", premium: "₹459" }
-            ],
-            resumetemplates: [
-                { feature: "Designs", basic: "1", standard: "2", premium: "3" },
-                { feature: "Customization", basic: "Basic", standard: "Advanced", premium: "Full" },
-                { feature: "Formats", basic: "Standard", standard: "Multiple", premium: "All Source Files" },
-                { feature: "Replacement", basic: "24 hours", standard: "48 hours", premium: "72 hours" },
-                { feature: "Delivery", basic: "24 hours", standard: "2-3 Days", premium: "Standard" },
-                { feature: "Price", basic: "₹279", standard: "₹379", premium: "₹479" }
-            ],
-            socialmediatemplates: [
-                { feature: "Designs", basic: "1", standard: "2", premium: "3" },
-                { feature: "Customization", basic: "Basic", standard: "Advanced", premium: "Full" },
-                { feature: "Formats", basic: "Standard", standard: "Multiple", premium: "All Source Files" },
-                { feature: "Replacement", basic: "24 hours", standard: "48 hours", premium: "72 hours" },
-                { feature: "Delivery", basic: "24 hours", standard: "2-3 Days", premium: "Standard" },
-                { feature: "Price", basic: "₹269", standard: "₹369", premium: "₹469" }
-            ],
-            invitationtemplates: [
-                { feature: "Designs", basic: "1", standard: "2", premium: "3" },
-                { feature: "Customization", basic: "Basic", standard: "Advanced", premium: "Full" },
-                { feature: "Formats", basic: "Standard", standard: "Multiple", premium: "All Source Files" },
-                { feature: "Replacement", basic: "24 hours", standard: "48 hours", premium: "72 hours" },
-                { feature: "Delivery", basic: "24 hours", standard: "2-3 Days", premium: "Standard" },
-                { feature: "Price", basic: "₹289", standard: "₹389", premium: "₹489" }
-            ],
-            customtemplates: [
-                { feature: "Designs", basic: "1", standard: "2", premium: "3" },
-                { feature: "Customization", basic: "Basic", standard: "Advanced", premium: "Full" },
-                { feature: "Formats", basic: "Standard", standard: "Multiple", premium: "All Source Files" },
-                { feature: "Replacement", basic: "24 hours", standard: "48 hours", premium: "72 hours" },
-                { feature: "Delivery", basic: "48 hours", standard: "3-4 Days", premium: "Standard" },
-                { feature: "Price", basic: "₹319", standard: "₹419", premium: "₹499" }
-            ],
-            website: [
-                { feature: "Design", basic: "Basic", standard: "Premium", premium: "Advanced" },
-                { feature: "Features", basic: "Mobile Optimization", standard: "Mobile Optimization", premium: "SEO & Domain" },
-                { feature: "Animations", basic: "Standard", standard: "Premium", premium: "Advanced" },
-                { feature: "Domain", basic: "Standard", standard: "Premium", premium: "Premium" },
-                { feature: "Replacement", basic: "24 hours", standard: "48 hours", premium: "72 hours" },
-                { feature: "Price", basic: "₹8000", standard: "₹15000", premium: "Contact Us" }
-            ]
-        };
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- Rain Animation ---
+            const rainContainer = document.querySelector('.rain-container');
+            if (rainContainer) {
+                let drops = "";
+                const dropsCount = 50; 
+                for (let i = 0; i < dropsCount; i++) {
+                    const left = Math.floor(Math.random() * 100);
+                    const baseDuration = 2.5; 
+                    const durationVariation = Math.random() * 1.5 - 0.75; 
+                    const duration = Math.max(1.5, baseDuration + durationVariation); // Ensures minimum 1.5s
+                    const delay = Math.random() * 5;
+                    drops += `<div class="raindrop" style="left: ${left}%; animation-duration: ${duration}s; animation-delay: ${delay}s;"></div>`;
+                }
+                rainContainer.innerHTML = drops;
+            }
 
-        const descriptions = [
-            { title: "Business Logos", description: "High-quality logos for a strong brand identity." },
-            { title: "YouTube Logos", description: "Unique logos to captivate your YouTube audience." },
-            { title: "Gaming Logos", description: "Dynamic logos for gaming brands." },
-            { title: "Social Media Logos", description: "Optimized logos for social media platforms." },
-            { title: "Custom Logos", description: "Fully customized logos for your vision." },
-            { title: "Business Posters", description: "Professional posters to promote your business." },
-            { title: "Event Posters", description: "Vibrant posters for events." },
-            { title: "Social Media Posters", description: "Engaging posters for social media." },
-            { title: "Festive Posters", description: "Festive-themed posters for celebrations." },
-            { title: "Custom Posters", description: "Bespoke posters tailored to your needs." },
-            { title: "Business Card Templates", description: "Sleek business card templates." },
-            { title: "Resume Templates", description: "Professional resume templates." },
-            { title: "Social Media Templates", description: "Templates for social media content." },
-            { title: "Invitation Templates", description: "Elegant invitation templates." },
-            { title: "Custom Templates", description: "Customized templates for your needs." },
-            { title: "Website", description: "Solid responsive websites with modern designs." }
-        ];
+            // --- Packages Data ---
+            const packagesData = {
+                businesslogos: {desc: "High-quality logos for a strong brand identity.", data: [{ f: "Concepts", b: "2", s: "6", p: "6" }, { f: "Revisions", b: "2", s: "5", p: "10" }, { f: "Files", b: "PNG, JPEG", s: "PNG, JPEG, PDF", p: "All Source Files" }, { f: "Price", b: "₹299", s: "₹399", p: "₹499" }]},
+                youtubelogos: {desc: "Unique logos to captivate your YouTube audience.", data: [{ f: "Concepts", b: "2", s: "6", p: "6" }, { f: "Revisions", b: "2", s: "5", p: "10" }, { f: "Files", b: "PNG, JPEG", s: "PNG, JPEG", p: "All Source Files" }, { f: "Price", b: "₹349", s: "₹449", p: "₹489" }]},
+                gaminglogos: {desc: "Dynamic logos for gaming brands.", data: [{ f: "Concepts", b: "2", s: "6", p: "6" }, { f: "Revisions", b: "2", s: "6", p: "10" }, { f: "Files", b: "PNG, JPEG", s: "PNG, JPEG", p: "All Source Files" }, { f: "Price", b: "₹279", s: "₹379", p: "₹479" }]},
+                socialmedialogos: {desc: "Optimized logos for social media platforms.", data: [{ f: "Concepts", b: "2", s: "6", p: "6" }, { f: "Revisions", b: "2", s: "5", p: "10" }, { f: "Files", b: "PNG, JPEG", s: "PNG, JPEG", p: "All Source Files" }, { f: "Price", b: "₹319", s: "₹419", p: "₹469" }]},
+                customlogos: {desc: "Fully customized logos for your vision.", data: [{ f: "Concepts", b: "2", s: "6", p: "10" }, { f: "Revisions", b: "3", s: "7", p: "Unlimited" }, { f: "Files", b: "PNG, JPEG", s: "PNG, JPEG, PDF", p: "All Source Files" }, { f: "Price", b: "₹359", s: "₹459", p: "₹499" }]},
+                businessposters: {desc: "Professional posters to promote your business.", data: [{ f: "Designs", b: "1", s: "2", p: "3" }, { f: "Revisions", b: "1", s: "5", p: "10" }, { f: "Files", b: "Print-Ready PDF", s: "Print & Save", p: "All Source Files" }, { f: "Price", b: "₹289", s: "₹389", p: "₹489" }]},
+                eventposters: {desc: "Vibrant posters for events.", data: [{ f: "Designs", b: "1", s: "2", p: "3" }, { f: "Revisions", b: "1", s: "5", p: "10" }, { f: "Files", b: "Print-Ready PDF", s: "Print & Save", p: "All Source Files" }, { f: "Price", b: "₹339", s: "₹439", p: "₹479" }]},
+                socialmediaposters: {desc: "Engaging posters for social media.", data: [{ f: "Designs", b: "1", s: "2", p: "3" }, { f: "Revisions", b: "1", s: "5", p: "10" }, { f: "Files", b: "Digital", s: "Digital & Optimized", p: "All Source Files" }, { f: "Price", b: "₹269", s: "₹369", p: "₹469" }]},
+                festiveposters: {desc: "Festive-themed posters for celebrations.", data: [{ f: "Designs", b: "1", s: "2", p: "3" }, { f: "Revisions", b: "1", s: "5", p: "10" }, { f: "Files", b: "Print-Ready PDF", s: "Print & Save", p: "All Source Files" }, { f: "Price", b: "₹309", s: "₹409", p: "₹469" }]},
+                customposters: {desc: "Bespoke posters tailored to your needs.", data: [{ f: "Designs", b: "1", s: "2", p: "3" }, { f: "Revisions", b: "2", s: "7", p: "Unlimited" }, { f: "Files", b: "Print-Ready PDF", s: "Print & Save", p: "All Source Files" }, { f: "Price", b: "₹349", s: "₹449", p: "₹499" }]},
+                businesscardtemplates: {desc: "Sleek business card templates.", data: [{ f: "Designs", b: "1", s: "2", p: "3" }, { f: "Customization", b: "Basic", s: "Advanced", p: "Full" }, { f: "Formats", b: "Standard", s: "Multiple", p: "All Source Files" }, { f: "Price", b: "₹259", s: "₹359", p: "₹459" }]},
+                resumetemplates: {desc: "Professional resume templates.", data: [{ f: "Designs", b: "1", s: "2", p: "3" }, { f: "Customization", b: "Basic", s: "Advanced", p: "Full" }, { f: "Formats", b: "Standard", s: "Multiple", p: "All Source Files" }, { f: "Price", b: "₹279", s: "₹379", p: "₹479" }]},
+                socialmediatemplates: {desc: "Templates for social media content.", data: [{ f: "Designs", b: "1", s: "2", p: "3" }, { f: "Customization", b: "Basic", s: "Advanced", p: "Full" }, { f: "Formats", b: "Standard", s: "Multiple", p: "All Source Files" }, { f: "Price", b: "₹269", s: "₹369", p: "₹469" }]},
+                invitationtemplates: {desc: "Elegant invitation templates.", data: [{ f: "Designs", b: "1", s: "2", p: "3" }, { f: "Customization", b: "Basic", s: "Advanced", p: "Full" }, { f: "Formats", b: "Standard", s: "Multiple", p: "All Source Files" }, { f: "Price", b: "₹289", s: "₹389", p: "₹489" }]},
+                customtemplates: {desc: "Customized templates for your needs.", data: [{ f: "Designs", b: "1", s: "2", p: "3" }, { f: "Customization", b: "Basic", s: "Advanced", p: "Full" }, { f: "Formats", b: "Standard", s: "Multiple", p: "All Source Files" }, { f: "Price", b: "₹319", s: "₹419", p: "₹499" }]},
+                website: {desc: "Solid responsive websites with modern designs and essential features.", data: [
+                    { f: "Number of Pages", b: "Up to 3", s: "Up to 5", p: "Up to 10+" },
+                    { f: "Design", b: "Basic Responsive", s: "Premium Custom", p: "Advanced Custom" },
+                    { f: "Features", b: "Standard Sections", s: "Animations, Contact Form", p: "Advanced Features, Blog" },
+                    { f: "CMS Integration", b: "No", s: "Basic (Optional)", p: "Yes (e.g., WordPress)" },
+                    { f: "E-commerce Functionality", b: "No", s: "Simple (Optional)", p: "Yes (e.g., WooCommerce)" },
+                    { f: "Basic SEO Setup", b: "No", s: "Yes", p: "Yes + On-Page SEO" },
+                    { f: "Hosting Assistance", b: "Guidance", s: "Setup Support", p: "Full Setup & Migration" },
+                    { f: "Support Duration", b: "1 Week Post-Launch", s: "2 Weeks Post-Launch", p: "1 Month Post-Launch" },
+                    { f: "Delivery", b: "5-7 Days", s: "10-14 Days", p: "Contact Us" },
+                    { f: "Price", b: "₹8000", s: "₹15000", p: "₹25000" }
+                ]}
+            };
 
-        function openModal(service, triggerButton) {
+            const monsoonPrices = {
+                default: { b: "₹39", s: "₹100", p: "₹200" }, 
+                website: { b: "₹1000", s: "₹2500", p: "₹5000" }
+            };
+
             const modal = document.querySelector('#package-modal');
-            const titleElement = document.querySelector('#package-title');
-            const descriptionElement = document.querySelector('#modal-description');
-            const tbody = document.querySelector('#package-body');
-            const cardContainer = document.querySelector('#package-cards');
+            const modalContent = modal ? modal.querySelector('.modal-content') : null;
+            const titleEl = modal ? modal.querySelector('#package-title') : null;
+            const descEl = modal ? modal.querySelector('#modal-description') : null;
+            const tbody = modal ? modal.querySelector('#package-body') : null;
+            const cardContainer = modal ? modal.querySelector('#package-cards') : null;
+            const closeButton = modal ? modal.querySelector('.close-btn') : null;
+            let previouslyFocusedElement = null;
 
-            if (!modal || !titleElement || !descriptionElement || !tbody || !cardContainer || !packages[service]) return;
 
-            const formattedTitle = service.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase()).trim();
-            titleElement.textContent = `${formattedTitle} Packages`;
-            const descriptionObj = descriptions.find(d => d.title.toLowerCase() === formattedTitle.toLowerCase());
-            descriptionElement.textContent = descriptionObj?.description || 'No description available';
+            function openModal(serviceKey, triggerButton) {
+                if (!modal || !packagesData[serviceKey] || !titleEl || !descEl || !tbody || !cardContainer) return;
 
-            tbody.innerHTML = packages[service].map(pkg => `
-                <tr>
-                    <td>${pkg.feature}</td>
-                    <td>${pkg.basic}</td>
-                    <td>${pkg.standard}</td>
-                    <td>${pkg.premium}</td>
-                </tr>
-            `).join('');
+                const serviceDetails = packagesData[serviceKey];
+                const servicePackageData = serviceDetails.data;
+                
+                previouslyFocusedElement = triggerButton || document.activeElement;
 
-            cardContainer.innerHTML = ['Basic', 'Standard', 'Premium'].map(tier => `
-                <div class="package-card">
-                    <h3>${tier}</h3>
-                    <div class="package-card-content">
-                        ${packages[service].map(pkg => `<p><strong>${pkg.feature}:</strong> ${pkg[tier.toLowerCase()]}</p>`).join('')}
-                    </div>
-                </div>
-            `).join('');
+                const formattedTitle = serviceKey.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase()).replace(/s$/, '').trim();
+                titleEl.textContent = `${formattedTitle} Packages`;
+                descEl.textContent = serviceDetails.desc || 'Package details below.';
+                const newPrices = (serviceKey === 'website') ? monsoonPrices.website : monsoonPrices.default;
 
-            modal.style.display = 'flex';
-            modal.setAttribute('aria-hidden', 'false');
-            document.body.style.overflow = 'hidden';
-            titleElement.focus();
+                tbody.innerHTML = servicePackageData.map(pkg => {
+                    if (pkg.f === "Price") {
+                        return `<tr class="price-row"><td>${pkg.f}</td><td class="price-cell"><del>${pkg.b}</del> <span class="new-price">${newPrices.b}</span></td><td class="price-cell"><del>${pkg.s}</del> <span class="new-price">${newPrices.s}</span></td><td class="price-cell"><del>${pkg.p}</del> <span class="new-price">${newPrices.p}</span></td></tr>`;
+                    }
+                    return `<tr><td>${pkg.f}</td><td>${pkg.b}</td><td>${pkg.s}</td><td>${pkg.p}</td></tr>`;
+                }).join('');
 
-            const focusableElements = modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
-            const firstFocusable = focusableElements[0];
-            const lastFocusable = focusableElements[focusableElements.length - 1];
+                cardContainer.innerHTML = ['Basic', 'Standard', 'Premium'].map(tier => {
+                    const tierKey = tier.toLowerCase().charAt(0); 
+                    let content = servicePackageData.map(pkg => {
+                        if (pkg.f === "Price") {
+                            return `<p><strong>${pkg.f}:</strong> <span class="price-cell"><del>${pkg[tierKey]}</del> <span class="new-price">${newPrices[tierKey]}</span></span></p>`;
+                        }
+                        return `<p><strong>${pkg.f}:</strong> ${pkg[tierKey]}</p>`;
+                    }).join('');
+                    return `<div class="package-card"><h3>${tier}</h3><div>${content}</div></div>`;
+                }).join('');
 
-            modal.addEventListener('keydown', e => {
-                if (e.key === 'Tab') {
-                    if (e.shiftKey && document.activeElement === firstFocusable) {
-                        e.preventDefault();
-                        lastFocusable.focus();
-                    } else if (!e.shiftKey && document.activeElement === lastFocusable) {
-                        e.preventDefault();
-                        firstFocusable.focus();
+                modal.style.display = 'flex';
+                modal.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden'; 
+                if(modalContent) modalContent.focus(); 
+                modal.triggerButton = triggerButton; 
+            }
+
+            function closeModal() {
+                if (modal) {
+                    modal.style.display = 'none';
+                    modal.setAttribute('aria-hidden', 'true');
+                    document.body.style.overflow = 'auto'; 
+                    if (previouslyFocusedElement) {
+                         previouslyFocusedElement.focus();
+                         previouslyFocusedElement = null;
                     }
                 }
+            }
+
+            document.querySelectorAll('.quick-view-btn:not(.disabled)').forEach(btn => {
+                btn.addEventListener('click', () => openModal(btn.dataset.service, btn));
             });
-
-            modal.triggerButton = triggerButton;
-        }
-
-        function closeModal() {
-            const modal = document.querySelector('#package-modal');
+            
             if (modal) {
-                modal.style.display = 'none';
-                modal.setAttribute('aria-hidden', 'true');
-                document.body.style.overflow = 'auto';
-                if (modal.triggerButton) {
-                    modal.triggerButton.focus();
-                }
+                modal.addEventListener('mousedown', e => { 
+                    if (e.target === modal) closeModal(); 
+                });
             }
-        }
-
-        document.querySelectorAll('.quick-view-btn:not(.disabled)').forEach(btn => {
-            btn.addEventListener('click', () => openModal(btn.getAttribute('data-service'), btn));
-        });
-
-        document.querySelector('#package-modal').addEventListener('mousedown', e => {
-            if (e.target === e.currentTarget) closeModal();
-        });
-
-        document.querySelector('.close-btn').addEventListener('click', closeModal);
-
-        const hamburger = document.querySelector('.hamburger');
-        const navMenu = document.querySelector('.nav-menu');
-        hamburger.addEventListener('click', () => {
-            const isActive = navMenu.classList.toggle('active');
-            hamburger.textContent = isActive ? '✕' : '☰';
-            hamburger.setAttribute('aria-expanded', isActive);
-        });
-
-        document.addEventListener('click', e => {
-            if (!navMenu.contains(e.target) && !hamburger.contains(e.target) && navMenu.classList.contains('active')) {
-                navMenu.classList.remove('active');
-                hamburger.textContent = '☰';
-                hamburger.setAttribute('aria-expanded', 'false');
+            if (closeButton) {
+                closeButton.addEventListener('click', closeModal);
             }
-        });
-
-        document.querySelectorAll('.nav-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                hamburger.textContent = '☰';
-                hamburger.setAttribute('aria-expanded', 'false');
+            
+            document.addEventListener('keydown', e => { 
+                if (e.key === 'Escape' && modal && modal.style.display === 'flex') closeModal(); 
             });
-        });
-
-        document.querySelectorAll('.service-category h3').forEach(header => {
-            header.addEventListener('click', () => {
-                const category = header.parentElement;
-                const isActive = category.classList.toggle('active');
-                header.setAttribute('aria-expanded', isActive);
-                if (isActive) {
-                    category.querySelectorAll('.service-card').forEach((card, index) => {
-                        setTimeout(() => {
-                            if (card.getBoundingClientRect().top < window.innerHeight) {
-                                card.classList.add('visible');
-                            }
-                        }, index * 150);
-                    });
-                }
-            });
-
-            let touchStartX = 0;
-            header.addEventListener('touchstart', e => {
-                touchStartX = e.changedTouches[0].screenX;
-            });
-            header.addEventListener('touchend', e => {
-                const touchEndX = e.changedTouches[0].screenX;
-                if (touchEndX - touchStartX > 50) {
-                    const category = header.parentElement;
-                    if (!category.classList.contains('active')) {
-                        category.classList.add('active');
-                        header.setAttribute('aria-expanded', 'true');
-                        category.querySelectorAll('.service-card').forEach((card, index) => {
-                            setTimeout(() => {
-                                if (card.getBoundingClientRect().top < window.innerHeight) {
-                                    card.classList.add('visible');
-                                }
-                            }, index * 150);
-                        });
+            
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+            if(hamburger && navMenu){
+                hamburger.addEventListener('click', () => {
+                    const isActive = navMenu.classList.toggle('active');
+                    hamburger.textContent = isActive ? '✕' : '☰';
+                    hamburger.setAttribute('aria-expanded', isActive.toString());
+                    if (isActive) {
+                        const firstLink = navMenu.querySelector('a');
+                        if (firstLink) firstLink.focus();
+                    } else {
+                        hamburger.focus();
                     }
-                } else if (touchStartX - touchEndX > 50) {
-                    const category = header.parentElement;
-                    if (category.classList.contains('active')) {
-                        category.classList.remove('active');
-                        header.setAttribute('aria-expanded', 'false');
-                    }
-                }
-            });
-        });
+                });
 
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', e => {
-                e.preventDefault();
-                const target = document.querySelector(anchor.getAttribute('href'));
-                if (target) {
-                    window.scrollTo({
-                        top: target.offsetTop - 80,
-                        behavior: 'smooth'
+                document.querySelectorAll('.nav-menu a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        if (navMenu.classList.contains('active')) {
+                            navMenu.classList.remove('active');
+                            hamburger.textContent = '☰';
+                            hamburger.setAttribute('aria-expanded', 'false');
+                            hamburger.focus(); 
+                        }
                     });
-                }
-            });
-        });
+                });
+            }
 
-        const backToTop = document.querySelector('#back-to-top');
-        window.addEventListener('scroll', () => {
-            backToTop.style.display = window.scrollY > 200 ? 'block' : 'none';
-        });
 
-        backToTop.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
+            const backToTopButton = document.querySelector('#back-to-top');
+            if(backToTopButton){
+                window.addEventListener('scroll', () => { 
+                    backToTopButton.style.display = window.scrollY > 200 ? 'flex' : 'none'; 
+                });
+                backToTopButton.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+            }
 
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.5 });
-
-        document.querySelectorAll('.service-card').forEach(card => observer.observe(card));
-
-        document.addEventListener('keydown', e => {
-            if (e.key === 'Escape' && document.querySelector('#package-modal').style.display === 'flex') {
-                closeModal();
+            // --- Service Card Intersection Observer ---
+            const serviceCards = document.querySelectorAll('.service-card');
+            if (serviceCards.length > 0 && 'IntersectionObserver' in window) {
+                const cardObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.1 });
+                
+                serviceCards.forEach(card => {
+                   cardObserver.observe(card);
+                });
+            } else { 
+                serviceCards.forEach(card => card.classList.add('visible'));
             }
         });
-
-        document.addEventListener('click', e => {
-            const card = e.target.closest('.package-card');
-            if (card && window.innerWidth <= 600) {
-                card.classList.toggle('active');
-            }
-        });
-
-        // Testimonial Slider
-        const slides = document.querySelector('.testimonial-slides');
-        const slideCount = document.querySelectorAll('.testimonial-slide').length;
-        let currentSlide = 0;
-
-        document.querySelector('#next-slide').addEventListener('click', () => {
-            currentSlide = (currentSlide + 1) % slideCount;
-            slides.style.transform = `translateX(-${currentSlide * 100}%)`;
-        });
-
-        document.querySelector('#prev-slide').addEventListener('click', () => {
-            currentSlide = (currentSlide - 1 + slideCount) % slideCount;
-            slides.style.transform = `translateX(-${currentSlide * 100}%)`;
-        });
-
-        // Auto-slide every 5 seconds
-        setInterval(() => {
-            currentSlide = (currentSlide + 1) % slideCount;
-            slides.style.transform = `translateX(-${currentSlide * 100}%)`;
-        }, 5000);
     </script>
-
     <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "Sanchalit Designs",
-            "url": "https://digipro3.github.io/DIGIPRO/",
-            "logo": "https://digipro3.github.io/DIGIPRO/logo.png",
-            "contactPoint": [
-                {
-                    "@type": "ContactPoint",
-                    "telephone": "+91-8902095871",
-                    "contactType": "customer service",
-                    "contactOption": "WhatsApp",
-                    "areaServed": "IN",
-                    "email": "sanchalithelp@gmail.com"
-                },
-                {
-                    "@type": "ContactPoint",
-                    "email": "sanchalithelp@gmail.com",
-                    "contactType": "customer support",
-                    "areaServed": "IN"
-                }
-            ],
-            "sameAs": [
-                "https://wa.me/+918902095871",
-                "https://instagram.com/sanchalit.designs",
-                "https://docs.google.com/forms/d/e/1FAIpQLSe-PS73I5C_xZ9BHkuVCWQRcDJhLqTVI0yO2YvO25fH0EcVhA/viewform?usp=dialog"
-            ],
-            "address": {
-                "@type": "PostalAddress",
-                "addressCountry": "IN",
-                "addressLocality": "India"
-            },
-            "description": "Sanchalit Designs offers creative digital solutions including logo design, poster design, responsive websites, templates, and YouTube thumbnails in India."
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Creative Digital Solutions",
+        "url": "https://digipro3.github.io/DIGIPRO/",
+        "logo": "https://digipro3.github.io/DIGIPRO/logo.png",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+91-8902095871",
+            "contactType": "Customer Service",
+            "areaServed": "IN",
+            "availableLanguage": "en"
+        },
+        "sameAs": [
+            "https://wa.me/+918902095871",
+            "https://instagram.com/sanchalit.designs" 
+        ],
+        "description": "We offer creative digital solutions including logo design, poster design, and responsive websites in India. Check out our Monsoon Mega Offer for incredible discounts, with services starting from just ₹39. Offer valid till 7th July 2025.",
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Monsoon Design Services",
+            "validThrough": "2025-07-07",
+            "itemListElement": [
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Basic Logo Design" }, "price": "39", "priceCurrency": "INR" },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Standard Logo Design" }, "price": "100", "priceCurrency": "INR" },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Premium Logo Design" }, "price": "200", "priceCurrency": "INR" },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Basic Website Creation" }, "price": "1000", "priceCurrency": "INR" },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Standard Website Creation" }, "price": "2500", "priceCurrency": "INR" },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Premium Website Creation" }, "price": "5000", "priceCurrency": "INR" }
+            ]
         }
+    }
     </script>
 </body>
 </html>
